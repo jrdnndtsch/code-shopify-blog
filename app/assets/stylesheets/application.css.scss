@@ -10,6 +10,12 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
- *= require_self
  */
+
+@import 'blog_posts';
+@import 'theme';
+@import 'variables/_index';
+@import 'mixins/_index';
+@import 'layout/_index';
+@import 'modules/_index';
+@import 'states/_index';

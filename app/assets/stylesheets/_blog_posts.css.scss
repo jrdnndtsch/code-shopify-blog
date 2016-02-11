@@ -1,0 +1,49 @@
+// Place all the styles related to the front-page controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "normalize";
+
+body {
+  background: #eee;
+}
+h1{
+	color: red;
+}
+
+.container {
+}
+.blog-post {
+  background-color: white;
+  padding: 5%;
+  margin-bottom: 2%;
+  box-shadow: 0 3px 7px 0 rgba(0,0,0,.12);
+}
+
+// form textarea, form input {
+//   width: 80%;
+//   display: block;
+//   margin: 10% auto;
+//   padding: 10%;
+//   border: 1px solid #ccc;
+//   border-radius: 5px;
+// }
+.spheres {
+    height: 585px;
+    background-color: white;
+    box-shadow: 0 3px 7px 0 rgba(0,0,0,.12);
+  }
+
+.title {
+font-size: 80px;
+color: whitesmoke;
+font-family: sans-serif;
+text-shadow: 0px 0px 7px black, 0px 0px 60px black, 0px 0px 60px black;
+position: absolute;
+width: 100%;
+text-align: center;
+top: 200px;
+/*background: rgba(255,255,255, 0.5);*/
+}
+.title span {
+color:#83AF9B;
+}

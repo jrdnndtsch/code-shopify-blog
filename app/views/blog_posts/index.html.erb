@@ -1,0 +1,22 @@
+
+  <div class="container">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde vitae excepturi nam, adipisci neque modi facere dolores sunt mollitia. Esse consectetur aut illo in numquam ea harum, tenetur. Quasi sint ipsam doloremque, facilis inventore.</p>
+  </div>
+  <div class="container">
+    <% @blog_posts.each do |blog_post| %>
+      <div class="blog-post">
+        <h2><%= blog_post.title %></h2>
+        <p><%= blog_post.created_at.strftime('%A, %b %d') %></p>
+        <p><%= blog_post.content %></p>
+        <p><%= blog_post.user %></p>
+        <p><%= link_to 'Show', blog_post %></p>
+        <p><%= link_to 'Edit', edit_blog_post_path(blog_post) %></p>
+        <p><%= link_to 'Destroy', blog_post, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+
+      </div>
+    <% end %>
+  </div> <!-- /.container -->
+
+<br>
+
+<%= link_to 'New Blog post', new_blog_post_path %>

@@ -1,0 +1,41 @@
+=clearfix
+	:zoom 1
+	&:before, &:after
+		:content ""
+		:display table
+	&:after
+		:clear both	
+=border-box
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box		
+=nesting
+	:padding 0
+	& > div
+		:float left
+		:margin-right gutter()
+		+border-box
+
+=row
+	:width 100%
+	:max-width $max-width
+	:margin 0 auto
+	+clearfix
+	+nesting
+
+@function offset-columns($from-direction, $columns)
+	$margin: $columns * $column-width + $columns * $gutted-width
+	@return $margin
+
+=offset($from-direction, $columns)
+	@if$from-direction == left
+		:float left
+		:margin-left offset-columns($columns)	
+	@if$from-direction == right
+		:float right
+		:margin-right offset-columns($columns)	
+=last
+	:margin-right 0
+	:float right
+
+	

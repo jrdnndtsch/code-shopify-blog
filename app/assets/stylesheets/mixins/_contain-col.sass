@@ -1,0 +1,39 @@
+@import layout/make-responsive
+@import layout/grid
+@import layout/make-adaptive 
+@import container
+
+=contain-col
+	:width 100%
+	+display-for(xl)
+		:max-width 573px
+	+display-for(lg)
+		:max-width 468px
+	+display-for(md)
+		:max-width 372px
+	+display-for(sm)
+		:max-width 290px	
+
+.contain-content
+	&--left
+		:line-height 28px
+		+contain-col
+		:float right
+		:padding-right 50px	
+		+display-for(sm xs)
+			:max-width 1000px
+			:padding-right 0
+			:float none
+			+make-column(12)
+			+container
+	&--right
+		:line-height 28px
+		+contain-col
+		:padding-left 50px
+		+display-for(sm xs)
+			:padding-left 0
+			:max-width 1000px
+			+make-column(12)
+			+container
+
+

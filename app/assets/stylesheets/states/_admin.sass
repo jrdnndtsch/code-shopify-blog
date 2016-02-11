@@ -1,0 +1,42 @@
+@import variables/colors
+
+#admin
+	h1
+		:color black
+
+	.col-half
+		:padding 40px
+		&:nth-of-type(4n+1)
+			:background-color $color-1
+			a
+				:color #242424
+			b
+				:border-color #242424
+
+		&:nth-of-type(4n+2)
+			:background-color $color-2
+			a
+				:color #242424
+			b
+				:border-color #242424
+
+		&:nth-of-type(4n+3)
+			:background-color $color-3
+
+		&:nth-of-type(4n+4)
+			:background-color $color-4
+			a
+				:color #242424
+			b
+				:border-color #242424
+	.button, .button-warning
+		// +button-style
+		:margin-left 50px
+		a
+			:color white
+	.button-warning
+		:background red
+		&:hover
+			:background darken(red, 20%)
+.radio label
+	:margin 10px
