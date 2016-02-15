@@ -5,11 +5,11 @@
   <div class="blog-post">
     <h2><%= @blog_post.title %></h2>
     <p><%= @blog_post.created_at.strftime('%A, %b %d') %></p>
-    <p><%= @blog_post.content %></p>
-    <p><%= @blog_post.user %></p>
-    <p><%= link_to 'Show', @blog_post %></p>
-    <p><%= link_to 'Edit', edit_blog_post_path(@blog_post) %></p>
-    <p><%= link_to 'Destroy', @blog_post, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+    <p><%= @blog_post.content.html_safe %></p>
+    <% if @blog_post.belongs_to_current_user?(current_user) %>
+      <p><%= link_to 'Edit', edit_blog_post_path(@blog_post) %></p>
+      <p><%= link_to 'Destroy', @blog_post, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+    <% end %>
 
   </div>
 

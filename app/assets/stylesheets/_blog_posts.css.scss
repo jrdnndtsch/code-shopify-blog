@@ -33,6 +33,11 @@ h1{
     box-shadow: 0 3px 7px 0 rgba(0,0,0,.12);
   }
 
+  .profile-img {
+    width: 200px;
+    border-radius: 50%;
+  }
+
 .title {
 font-size: 80px;
 color: whitesmoke;
@@ -46,4 +51,8 @@ top: 200px;
 }
 .title span {
 color:#83AF9B;
+}
+
+.paginate {
+  text-align: center;
 }

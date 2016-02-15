@@ -6,12 +6,18 @@
     <% @blog_posts.each do |blog_post| %>
       <div class="blog-post">
         <h2><%= blog_post.title %></h2>
+        <% if blog_post.user.present?%>
+        <h4><%= blog_post.author%></h4>
+        <a href="http://<%= blog_post.user.profile.website_url%>" target="_blank"><%= image_tag blog_post.user.profile.avatar.url(:small), class: 'profile-img' %></a>
+        <% end %>
         <p><%= blog_post.created_at.strftime('%A, %b %d') %></p>
-        <p><%= blog_post.content %></p>
-        <p><%= blog_post.user %></p>
-        <p><%= link_to 'Show', blog_post %></p>
-        <p><%= link_to 'Edit', edit_blog_post_path(blog_post) %></p>
-        <p><%= link_to 'Destroy', blog_post, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+        <p><%= blog_post.excerpt.html_safe %></p>
+        <p><%= link_to 'Read More...', blog_post %></p>
+
+        <% if blog_post.belongs_to_current_user?(current_user) %>
+          <p><%= link_to 'Edit', edit_blog_post_path(blog_post) %></p>
+          <p><%= link_to 'Destroy', blog_post, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+        <% end %>
 
       </div>
     <% end %>
@@ -19,4 +25,7 @@
 
 <br>
 
+<%= will_paginate @blog_posts, class: 'paginate' %>
+
+<br>
 <%= link_to 'New Blog post', new_blog_post_path %>

@@ -1,25 +1,33 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
 
-<p>
-  <strong>First name:</strong>
-  <%= @profile.first_name %>
-</p>
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Last name:</strong>
-  <%= @profile.last_name %>
-</p>
+  <%= image_tag @profile.avatar.url(:small), class: 'profile-img' %>
+  <p>
+    <%= @profile.first_name %> <%= @profile.last_name %>
+  </p>
 
-<p>
-  <strong>Website url:</strong>
-  <%= @profile.website_url %>
-</p>
+  <p>
+    <%= @profile.website_url %>
+  </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @profile.user %>
-</p>
 
-<%= image_tag @profile.avatar.url(:small) %>
-<%= link_to 'Edit', edit_profile_path(@profile) %> |
-<%= link_to 'Back', profiles_path %>
+
+  <%= link_to 'Edit Profile', edit_profile_path(@profile) %>
+
+
+  <% @blog_posts.each do |blog_post| %>
+    <div class="blog-post">
+      <h2><%= blog_post.title %></h2>
+      <p><%= blog_post.created_at.strftime('%A, %b %d') %></p>
+      <p><%= blog_post.excerpt.html_safe %></p>
+      <p><%= link_to 'Read More...', blog_post %></p>
+
+      <% if blog_post.belongs_to_current_user?(current_user) %>
+        <p><%= link_to 'Edit', edit_blog_post_path(blog_post) %></p>
+        <p><%= link_to 'Destroy', blog_post, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+      <% end %>
+
+    </div>
+  <% end %>
+</div>

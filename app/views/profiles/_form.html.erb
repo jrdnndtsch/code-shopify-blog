@@ -27,10 +27,9 @@
     <%= f.label :avatar%>
     <%= f.file_field :avatar %>
   </div>
-  <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.text_field :user_id %>
-  </div>
+  <% if @profile.avatar.url.present? %>
+    <%= image_tag @profile.avatar.url(:small), class: 'profile-img' %>
+  <% end %>
   <div class="actions">
     <%= f.submit %>
   </div>

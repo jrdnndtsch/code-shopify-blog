@@ -14,6 +14,9 @@ gem 'friendly_id', '~> 5.1.0'
 #Pagination
 gem 'will_paginate'
 
+#Tagging
+gem 'acts-as-taggable-on', '~> 3.4'
+
 #for image management
 gem 'paperclip'
 gem 'aws-sdk-v1'
