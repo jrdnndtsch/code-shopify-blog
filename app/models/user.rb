@@ -6,4 +6,12 @@ class User < ActiveRecord::Base
 
   has_many :blog_posts
   has_one :profile
+
+  scope :is_published?   , -> () {
+    blog_posts.present?
+  }
+
+  def is_published?
+    self.blog_posts.present?
+  end
 end

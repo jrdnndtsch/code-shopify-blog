@@ -7,13 +7,20 @@
     <p><%= @blog_post.created_at.strftime('%A, %b %d') %></p>
     <p><%= @blog_post.content.html_safe %></p>
     <% if @blog_post.belongs_to_current_user?(current_user) %>
-      <p><%= link_to 'Edit', edit_blog_post_path(@blog_post) %></p>
-      <p><%= link_to 'Destroy', @blog_post, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+      <p><%= link_to 'Edit', edit_blog_post_path(@blog_post), class: 'button' %></p>
+      <p><%= link_to 'Destroy', @blog_post, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button-warning' %></p>
     <% end %>
 
   </div>
 
 </div>
 
-<%= link_to 'Edit', edit_blog_post_path(@blog_post) %> |
-<%= link_to 'Back', blog_posts_path %>
+
+
+<script>
+  jQuery(document).ready(function($){
+    Rainbow.color();
+  });
+
+
+</script>

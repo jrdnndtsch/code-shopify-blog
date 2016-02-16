@@ -1,5 +1,5 @@
 @import variables/font
-#home, #portfolio, #aboutUs
+#home, #portfolio, #aboutUs, #blog
 	p
 		:font-size 16px
 		:line-height 28px
@@ -12,6 +12,13 @@
 	h3.sub-title-01, h3.sub-title-02
 		:font-family $header-font
 		:line-height 44px
+	ul
+		li
+			:list-style-type none
+	a
+		:text-decoration none
+		&:hover, &:focus, &:active
+			:color $green
 	.attn
 		:font-family $body-font
 		:font-weight 300
@@ -24,12 +31,29 @@
 		:padding-left 50px
 		+display-for(sm xs)
 			:padding 0
-	.button
-		// +button-style
-		:margin-left 50px
+	.button, .button-warning, .button-tag
+		+button-style
+		// :margin-left 50px
 		:display inline-block
 		+display-for(sm xs)
 			:margin-left 0
+	.button-warning
+		:background red
+		&:hover
+			:background darken(red, 20%)
+	.paginate
+		em
+			:font-style normal
+			:margin 0 1%
+		a
+			:margin 0 1%
+		.previous_page.disabled, .next_page.disabled
+			:background white
+			:color #777
+			:margin 0 1%
+		.current
+			:background $green
+			:padding 1%
 .home
 	&__header
 		:background $light-grey

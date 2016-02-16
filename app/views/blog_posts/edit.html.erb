@@ -3,7 +3,7 @@
 
   <%= render 'form' %>
 
-  <%= link_to 'Show', @blog_post %> |
-  <%= link_to 'Back', blog_posts_path %>
+  <%= link_to 'Preview', @blog_post, class: 'button' %>
+  <%= link_to 'Destroy', @blog_post, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button-warning' %>
 
 </div>

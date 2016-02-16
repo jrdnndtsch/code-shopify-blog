@@ -11,6 +11,11 @@ class BlogPost < ActiveRecord::Base
     where(user: author)
   }
 
+  scope :published?, -> {
+    where(published: true)
+  }
+
+
   def belongs_to_current_user?(current_user)
     self.user == current_user
   end

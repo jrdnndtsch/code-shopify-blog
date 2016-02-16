@@ -17,6 +17,15 @@ h1{
   padding: 5%;
   margin-bottom: 2%;
   box-shadow: 0 3px 7px 0 rgba(0,0,0,.12);
+  width: 98%;
+}
+
+.side-bar {
+  background-color: white;
+  padding: 5%;
+  margin-bottom: 1.5%;
+  box-shadow: 0 3px 7px 0 rgba(0,0,0,.12);
+  width: 98%;
 }
 
 // form textarea, form input {
@@ -28,21 +37,26 @@ h1{
 //   border-radius: 5px;
 // }
 .spheres {
-    height: 585px;
+    height: 558px;
     background-color: white;
     box-shadow: 0 3px 7px 0 rgba(0,0,0,.12);
   }
 
-  .profile-img {
-    width: 200px;
-    border-radius: 50%;
-  }
+.profile-img {
+  width: 150px;
+  border-radius: 50%;
+}
 
+.author-img {
+	width: 30%;
+	margin: 1%;
+	border-radius: 50%;
+}
 .title {
 font-size: 80px;
 color: whitesmoke;
 font-family: sans-serif;
-text-shadow: 0px 0px 7px black, 0px 0px 60px black, 0px 0px 60px black;
+text-shadow: 0px 0px 7px black, 0px 0px 60px black, 0px 0px 60px black, 0px 0px 60px black;
 position: absolute;
 width: 100%;
 text-align: center;

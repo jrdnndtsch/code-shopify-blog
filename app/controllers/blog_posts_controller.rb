@@ -4,7 +4,16 @@ class BlogPostsController < ApplicationController
   # GET /blog_posts
   # GET /blog_posts.json
   def index
-    @blog_posts = BlogPost.paginate(:page => params[:page], :per_page => 2)
+    if params[:author]
+      @blog_posts = BlogPost.by_author(params[:author]).published?.order(created_at: :desc).paginate(:page => params[:page], :per_page => 2)
+    elsif params[:tag]
+      @blog_posts = BlogPost.tagged_with(params[:tag]).published?.order(created_at: :desc).paginate(:page => params[:page], :per_page => 2)
+      # raise "hell"
+    else
+      @blog_posts = BlogPost.published?.order(created_at: :desc).paginate(:page => params[:page], :per_page => 2)
+    end
+    @authors = User.all.includes(:blog_posts)
+    @tags = ActsAsTaggableOn::Tag.all.where.not(taggings_count: 0).order(taggings_count: :desc)
   end
 
   # GET /blog_posts/1
@@ -83,6 +92,6 @@ class BlogPostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def blog_post_params
-      params.require(:blog_post).permit(:title, :content, :tag_list)
+      params.require(:blog_post).permit(:title, :content, :tag_list, :published)
     end
 end

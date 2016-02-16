@@ -1,31 +1,65 @@
 
   <div class="container">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde vitae excepturi nam, adipisci neque modi facere dolores sunt mollitia. Esse consectetur aut illo in numquam ea harum, tenetur. Quasi sint ipsam doloremque, facilis inventore.</p>
+    <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde vitae excepturi nam, adipisci neque modi facere dolores sunt mollitia. Esse consectetur aut illo in numquam ea harum, tenetur. Quasi sint ipsam doloremque, facilis inventore.</h4>
   </div>
-  <div class="container">
-    <% @blog_posts.each do |blog_post| %>
-      <div class="blog-post">
-        <h2><%= blog_post.title %></h2>
-        <% if blog_post.user.present?%>
-        <h4><%= blog_post.author%></h4>
-        <a href="http://<%= blog_post.user.profile.website_url%>" target="_blank"><%= image_tag blog_post.user.profile.avatar.url(:small), class: 'profile-img' %></a>
-        <% end %>
-        <p><%= blog_post.created_at.strftime('%A, %b %d') %></p>
-        <p><%= blog_post.excerpt.html_safe %></p>
-        <p><%= link_to 'Read More...', blog_post %></p>
+  <div class="container container--flex">
+    <div class="col--twothirds">
+      <% @blog_posts.each do |blog_post| %>
+        <div class="blog-post">
+          <h2><%= blog_post.title %></h2>
+          <% if blog_post.user.present?%>
+          <h4><%= blog_post.author%></h4>
+          <a href="http://<%= blog_post.user.profile.website_url%>" target="_blank"><%= image_tag blog_post.user.profile.avatar.url(:small), class: 'profile-img' %></a>
+          <% end %>
+          <p><%= blog_post.created_at.strftime('%A, %b %d') %></p>
+          <p><%= blog_post.excerpt.html_safe %></p>
+          <p><%= link_to 'Read More...', blog_post %></p>
 
-        <% if blog_post.belongs_to_current_user?(current_user) %>
-          <p><%= link_to 'Edit', edit_blog_post_path(blog_post) %></p>
-          <p><%= link_to 'Destroy', blog_post, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+          <% if blog_post.belongs_to_current_user?(current_user) %>
+            <p><%= link_to 'Edit', edit_blog_post_path(blog_post), class: 'button' %></p>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+    <div class="side-bar col--three">
+      <%= link_to blog_posts_path do%>
+        <h2>Authors</h2>
+      <% end %>
+        <% @authors.each do |author|%>
+          <% if author.blog_posts.present? && author.profile.avatar.present? %>
+            <!-- <a href="http://<%= author.profile.website_url%>" target="_blank"> -->
+            <%= link_to blog_posts_path(author: author) do %>
+              <%= image_tag author.profile.avatar.url(:small), class: 'author-img'%>
+            <% end%>
+          <% end %>
         <% end %>
+        <hr>
+        <%= link_to blog_posts_path do %>
+          <h2>Tags</h2>
+        <% end %>
+          <ul>
+            <% @tags.each do |tag|%>
+              <li><%= link_to blog_posts_path(tag: tag.name), class: 'button-tag' do %>
+                <%= tag %>
+              <% end %></li>
+            <% end %>
 
-      </div>
-    <% end %>
+          </ul>
+    </div>
+
+
   </div> <!-- /.container -->
 
 <br>
 
 <%= will_paginate @blog_posts, class: 'paginate' %>
 
-<br>
-<%= link_to 'New Blog post', new_blog_post_path %>
+ <br>
+
+ <script>
+   jQuery(document).ready(function($){
+     Rainbow.color();
+     $('.previous_page').text('<<');
+     $('.next_page').text('>>')
+   });
+ </script>

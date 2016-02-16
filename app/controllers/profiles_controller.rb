@@ -12,7 +12,7 @@ class ProfilesController < ApplicationController
   # GET /profiles/1.json
   def show
     if users_profile?
-      @blog_posts = BlogPost.by_author(current_user)
+      @blog_posts = BlogPost.by_author(current_user).order(created_at: :desc)
     else
       redirect_to root_path
     end

@@ -5,32 +5,33 @@
 		ul
 			:margin 0
 			:padding 0
-			:position absolute
-			:top 50%
-			:left 110px
-			:transform translateY(-50%)
+			:float right
+			// :position absolute
+			// :top 50%
+			// :left 110px
+			// :transform translateY(-50%)
 			li
 				:list-style none
 				:display inline-block
+				:margin 10px 0
 				:margin-right 10px
-				:font-family $body-font
 				:font-size 15px
-				a 
+				a
 					:text-decoration none
 					:color $black
 					:transition all 0.3s
 					&:hover, &:focus, &:active
 						// :text-decoration underline
 						:color $green
-						
+
 				&:after
-					:content '//'
+					:content '/'
 					:margin-left 10px
 					:color rgba(0,0,0,0.6)
 				&:last-of-type
 					:margin-right 0
 					&:after
-						:content ''		
+						:content ''
 	&__logo
 		:display inline-block
 		img
@@ -42,7 +43,7 @@ footer
 	&__info
 		:color $black
 		:padding 20px
-		p 
+		p
 			:margin 0
 			:font-size 14px
 			:line-height 24px
@@ -57,7 +58,7 @@ footer
 			:display inline-block
 			:position fixed
 			:top 150px
-			li 
+			li
 				:list-style none
 				:font-family $body-font
 				:font-size 14px
@@ -67,12 +68,12 @@ footer
 					:text-decoration none
 					:color $black
 					&:hover
-						:text-decoration underline	
-	&__logo 
-		:width 80px	
+						:text-decoration underline
+	&__logo
+		:width 80px
 		:margin-top 20px
 		:position fixed
-	
+
 footer
 	:font-family $body-font
 	:background $black
@@ -81,34 +82,34 @@ footer
 	:padding 20px 0
 	:font-size 14px
 	.col-half
-		p 
+		p
 			+display-for(md lg xl)
 				:padding-left 50px
-	p 
+	p
 		:margin-top 0
 
-	ul 
+	ul
 		:margin 0
 		:padding 0
 		:list-style none
 		+display-for(sm xs)
 			:margin-top 14px
 			:margin-bottom 24px
-		li 
+		li
 			:margin-bottom 8px
 			+display-for(sm xs)
 				:width 33.33%
 				:display inline-block
 				:text-align center
 				:margin-bottom 0
-				span 
+				span
 					:display none
 			&:last-of-type
 				:margin-bottom 0
-			a 
-				:color $light-grey		
+			a
+				:color $light-grey
 		i
-			:width 32px 
+			:width 32px
 			:height 32px
 			:background $light-grey
 			:color $black
@@ -121,5 +122,4 @@ footer
 				:line-height 32px
 				:font-size 18px
 			&:hover
-				:background $green	
-		
+				:background $green
