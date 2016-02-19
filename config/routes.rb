@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'formatguide/show'
+
   resources :profiles
   resources :blog_posts
 

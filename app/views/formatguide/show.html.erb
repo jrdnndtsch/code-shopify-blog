@@ -1,0 +1,76 @@
+<br><br>
+<div class="container">
+  <div class="blog-post">
+    <h2>Formatting Blog Posts</h2>
+    <p>stuff</p>
+
+<pre><code data-language="html">
+  <!-- use a code tag and a pre tag* -->
+  <pre><code data-language="javascript">
+    $(document).ready(function(){
+      $("p").click(function(){
+          $(this).hide();
+      });
+    });
+  </code></pre>
+</code></pre>
+
+<pre><code data-language="html">
+<h1>The Title</h1>
+<p>some text</p>
+<a href="google.ca"></a>
+</code></pre>
+<pre><code data-language="javascript">
+  var svg = d3.select(".spheres").append("svg")
+      .attr("width", width)
+      .attr("height", height)
+    .append("g")
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+  d3.timer(function() {
+    for (var i = 0; i < m && --n >= 0; ++i) {
+      var circle = newCircle(k);
+
+      svg.append("circle")
+          .attr("cx", circle[0])
+          .attr("cy", circle[1])
+          .attr("r", 0)
+          .style("fill-opacity", (Math.random() + .2 ) / 2)
+        .transition()
+          .attr("r", circle[2]);
+
+      // As we add more circles, generate more candidates per circle.
+      // Since this takes more effort, gradually reduce circles per frame.
+      if (k < 500) k *= 1.01, m *= .998;
+    }
+    return !n;
+  });
+</code></pre>
+
+<pre><code data-language="css">
+body {
+  background: #eee;
+}
+h1{
+  color: red;
+}
+
+hr {
+  margin: 15% 5%
+}
+
+.container {
+}
+.blog-post {
+  background-color: white;
+  padding: 5%;
+  margin-bottom: 2%;
+  box-shadow: 0 3px 7px 0 rgba(0,0,0,.12);
+  width: 98%;
+
+  h2 {
+    text-align: center;
+  }
+}
+</code></pre>
+</div>
