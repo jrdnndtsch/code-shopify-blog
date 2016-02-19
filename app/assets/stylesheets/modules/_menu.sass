@@ -38,11 +38,10 @@
 			:width 90px
 
 footer
-	:background $light-grey
+	:background #555
 .footer
 	&__info
 		:color $black
-		:padding 20px
 		p
 			:margin 0
 			:font-size 14px
@@ -76,18 +75,24 @@ footer
 
 footer
 	:font-family $body-font
-	:background $black
+	:background #555
 	:color $light-grey
 	:font-weight 100
 	:padding 20px 0
 	:font-size 14px
+	a
+		:text-decoration none
+		:color white
+		:font-weight 600
+		&:hover
+			:color $green
 	.col-half
 		p
 			+display-for(md lg xl)
 				:padding-left 50px
 	p
-		:margin-top 0
-
+		:margin 0
+		:text-shadow 0 2px 5px rgba(0, 0, 0, 0.45)
 	ul
 		:margin 0
 		:padding 0
@@ -97,6 +102,7 @@ footer
 			:margin-bottom 24px
 		li
 			:margin-bottom 8px
+			:float left
 			+display-for(sm xs)
 				:width 33.33%
 				:display inline-block
@@ -116,6 +122,7 @@ footer
 			:border-radius 50%
 			:text-align center
 			:margin-right 1em
+			:box-shadow 0 3px 7px 0 rgba(0, 0, 0, 0.45)
 			+display-for(sm xs)
 				:margin-right 0
 			&:before

@@ -8,8 +8,10 @@
         <div class="blog-post">
           <h2><%= blog_post.title %></h2>
           <% if blog_post.user.present?%>
-          <h4><%= blog_post.author%></h4>
-          <a href="http://<%= blog_post.user.profile.website_url%>" target="_blank"><%= image_tag blog_post.user.profile.avatar.url(:small), class: 'profile-img' %></a>
+            <div class="author-post col--three">
+              <a href="http://<%= blog_post.user.profile.website_url%>" target="_blank"><%= image_tag blog_post.user.profile.avatar.url(:small), class: 'profile-img' %>
+              <h4><%= blog_post.author%></h4></a>
+            </div>
           <% end %>
           <p><%= blog_post.created_at.strftime('%A, %b %d') %></p>
           <p><%= blog_post.excerpt.html_safe %></p>

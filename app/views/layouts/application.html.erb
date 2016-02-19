@@ -6,6 +6,8 @@
   <script src="http://d3js.org/d3.v3.min.js"></script>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 <body>
   <p class="notice"><%= notice %></p>
@@ -33,6 +35,21 @@
   <div id="home">
     <%= yield %>
   </div>
+
+      <footer>
+        <div class="container container--flex">
+          <div class="col--two">
+            <ul>
+              <li><a href="https://twitter.com/up_at_five" target="_blank"><i class="fa fa-twitter"></i></a></li><!--
+              *--><li><a href="https://www.facebook.com/upat5/" target="_blank"><i class="fa fa-facebook"></i></a></li><!--
+              *--><li><a href="https://www.instagram.com/up_at_five/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+            </ul>
+          </div>
+            <div class="col--two">
+              <p>Brought to you by <a href="http://upatfive.ca" target="_blank">Up at Five</a>, a digital studio based in Toronto, Canada.</p>
+            </div>
+        </div>
+      </footer>
 
   <script>
     var maxRadius = 32, // maximum radius of circle
