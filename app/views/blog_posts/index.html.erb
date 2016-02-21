@@ -8,7 +8,7 @@
     <div class="col--twothirds">
       <% @blog_posts.each do |blog_post| %>
         <div class="blog-post">
-          <h2><%= blog_post.title %></h2>
+          <%=link_to blog_post do %><h2><%= blog_post.title %></h2> <% end %>
           <% if blog_post.user.present?%>
             <div class="author-post col--three">
               <a href="http://<%= blog_post.user.profile.website_url%>" target="_blank"><%= image_tag blog_post.user.profile.avatar.url(:small), class: 'profile-img' %>
