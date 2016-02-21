@@ -5,6 +5,9 @@
   <div class="blog-post">
     <h2><%= @blog_post.title %></h2>
     <p><%= @blog_post.created_at.strftime('%A, %b %d') %></p>
+    <% if @blog_post.photo.present? %>
+      <%= image_tag @blog_post.photo.url %>
+    <% end %>
     <p><%= @blog_post.content.html_safe %></p>
     <% if @blog_post.belongs_to_current_user?(current_user) %>
       <p><%= link_to 'Edit', edit_blog_post_path(@blog_post), class: 'button' %></p>

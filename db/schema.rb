@@ -11,28 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160220182614) do
-
-  create_table "blog_photos", force: :cascade do |t|
-    t.integer  "blog_post_id"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
-    t.datetime "image_updated_at"
-  end
-
-  add_index "blog_photos", ["blog_post_id"], name: "index_blog_photos_on_blog_post_id"
+ActiveRecord::Schema.define(version: 20160221134145) do
 
   create_table "blog_posts", force: :cascade do |t|
     t.string   "title"
     t.text     "content"
     t.integer  "user_id"
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
     t.string   "slug"
-    t.boolean  "published",  default: false
+    t.boolean  "published",          default: false
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
   end
 
   add_index "blog_posts", ["slug"], name: "index_blog_posts_on_slug", unique: true

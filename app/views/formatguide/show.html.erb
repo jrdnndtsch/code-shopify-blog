@@ -1,7 +1,11 @@
 <br><br>
 <div class="container">
   <div class="blog-post">
-    <h2>Formatting Blog Posts</h2>
+<h2>Formatting Blog Posts</h2>
+    <p>For general formatting use standard html tags p, h1, div</p>
+
+     <p>A header image can be added to the top of the blog.  Other images can be added through the normal image tag, but for now must come from an outside source.  Adding the class of center adds 'text-align: center;', use accordingly</p>
+
     <p>Wrap all code in <span>pre</span> tags and <span>code</span> tags and add the <span>data-language</span> attribute with the desired language.  Use "javascript" for d3</p>
 
 
@@ -16,6 +20,8 @@
   </code></pre>
 </code></pre>
 
+
+<p>The above will render as such: </p>
 <pre><code data-language="javascript">
   $(document).ready(function(){
     $("p").click(function(){
@@ -24,38 +30,24 @@
   });
 </code></pre>
 
+<p>the data-language "html" will render like this:</p>
 <pre><code data-language="html">
 <h1>The Title</h1>
 <p>some text</p>
 <a href="google.ca"></a>
 </code></pre>
+
+
+<p>Use "javascript" for d3js</p>
 <pre><code data-language="javascript">
   var svg = d3.select(".spheres").append("svg")
       .attr("width", width)
       .attr("height", height)
     .append("g")
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-  d3.timer(function() {
-    for (var i = 0; i < m && --n >= 0; ++i) {
-      var circle = newCircle(k);
-
-      svg.append("circle")
-          .attr("cx", circle[0])
-          .attr("cy", circle[1])
-          .attr("r", 0)
-          .style("fill-opacity", (Math.random() + .2 ) / 2)
-        .transition()
-          .attr("r", circle[2]);
-
-      // As we add more circles, generate more candidates per circle.
-      // Since this takes more effort, gradually reduce circles per frame.
-      if (k < 500) k *= 1.01, m *= .998;
-    }
-    return !n;
-  });
 </code></pre>
 
+<p>And "css" looks like this</p>
 <pre><code data-language="css">
 body {
   background: #eee;
@@ -67,21 +59,8 @@ h1{
 hr {
   margin: 15% 5%
 }
-
-.container {
-}
-.blog-post {
-  background-color: white;
-  padding: 5%;
-  margin-bottom: 2%;
-  box-shadow: 0 3px 7px 0 rgba(0,0,0,.12);
-  width: 98%;
-
-  h2 {
-    text-align: center;
-  }
-}
 </code></pre>
+</div>
 </div>
 
 <script>
