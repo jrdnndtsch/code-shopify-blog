@@ -2,7 +2,8 @@
 <div class="container">
   <div class="blog-post">
     <h2>Formatting Blog Posts</h2>
-    <p>stuff</p>
+    <p>Wrap all code in <span>pre</span> tags and <span>code</span> tags and add the <span>data-language</span> attribute with the desired language.  Use "javascript" for d3</p>
+
 
 <pre><code data-language="html">
   <!-- use a code tag and a pre tag* -->
@@ -13,6 +14,14 @@
       });
     });
   </code></pre>
+</code></pre>
+
+<pre><code data-language="javascript">
+  $(document).ready(function(){
+    $("p").click(function(){
+        $(this).hide();
+    });
+  });
 </code></pre>
 
 <pre><code data-language="html">
@@ -74,3 +83,11 @@ hr {
 }
 </code></pre>
 </div>
+
+<script>
+  jQuery(document).ready(function($){
+    Rainbow.color();
+  });
+
+
+</script>

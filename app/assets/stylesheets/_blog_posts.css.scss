@@ -11,11 +11,18 @@ h1{
 }
 
 hr {
-  margin: 15% 5%
+  margin: 15% 5%;
+  background-color: #000;
+border-top: solid 1px #999;
+border-left: none;
+height:0px;
 }
 
-.container {
-}
+
+// .center {
+//   // text-align: center;
+//   // +center
+// }
 .blog-post {
   background-color: white;
   padding: 5%;

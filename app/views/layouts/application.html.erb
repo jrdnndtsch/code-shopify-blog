@@ -64,12 +64,22 @@
         newCircle = bestCircleGenerator(maxRadius, padding);
 
 
+
+
     var svg = d3.select(".spheres").append("svg")
         .attr("width", width)
         .attr("height", height)
       .append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
+    // filters go in defs element
+    var defs = svg.append("defs");
+
+    // create filter with id #drop-shadow
+    // height=130% so that the shadow is not clipped
+    var filter = defs.append("filter")
+        .attr("id", "drop-shadow")
+        // .attr("height", "130%");
     d3.timer(function() {
       for (var i = 0; i < m && --n >= 0; ++i) {
         var circle = newCircle(k);

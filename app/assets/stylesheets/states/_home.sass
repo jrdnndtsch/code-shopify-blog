@@ -20,6 +20,8 @@
 		:color #222
 		&:hover, &:focus, &:active
 			:color $green
+	.center
+		:text-align center
 	.attn
 		:font-family $body-font
 		:font-weight 300
@@ -35,7 +37,10 @@
 	.button, .button-warning, .button-tag
 		+button-style
 		// :margin-left 50px
+		:color white
 		:display inline-block
+		&:hover
+			:color white
 		+display-for(sm xs)
 			:margin-left 0
 	.button-warning
@@ -50,12 +55,12 @@
 		a
 			:margin 0 1%
 		.previous_page.disabled, .next_page.disabled
-			:background white
 			:color #777
 			:margin 0 1%
 		.current
 			:background $green
-			:padding 1%
+			:padding 6px 11px
+			:border-radius 50%
 .home
 	&__header
 		:background $light-grey
