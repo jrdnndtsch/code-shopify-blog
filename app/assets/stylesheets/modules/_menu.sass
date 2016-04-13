@@ -1,132 +1,54 @@
-.site-header
-	:position relative
-	:background white
-	&__navigation
-		ul
-			:margin 0
-			:padding 0
-			:float right
-			// :position absolute
-			// :top 50%
-			// :left 110px
-			// :transform translateY(-50%)
-			li
-				:list-style none
-				:display inline-block
-				:margin 10px 0
-				:margin-right 10px
-				:font-size 15px
-				a
-					:text-decoration none
-					:color $black
-					:transition all 0.3s
-					&:hover, &:focus, &:active
-						// :text-decoration underline
-						:color $green
+.sidebar
+	:background linear-gradient(to bottom, rgba(181,255,235,0.4) 0%, rgba(181,255,235,0.4) 59%, rgba(181,255,235,1) 100%)
+	:width 25%
+	:position fixed
+	:top 0
+	:left 0
+	:height 100%
+	:padding-top 180px
 
-				&:after
-					:content '/'
-					:margin-left 10px
-					:color rgba(0,0,0,0.6)
-				&:last-of-type
-					:margin-right 0
-					&:after
-						:content ''
-	&__logo
-		:display inline-block
-		img
-			:width 90px
-
-footer
-	:background #555
-.footer
-	&__info
-		:color $black
-		p
-			:margin 0
-			:font-size 14px
-			:line-height 24px
-
-
-.site-header-secondary
-	:height 100vh
-	&__navigation
-		ul
-			:margin 0
-			:padding 0
+	> a
+		:display block
+		:width 100%
+		:text-align center
+		:padding 20px
+		:font-size 20px
+		:text-decoration none
+		:color #333
+		:border-bottom none
+		&:hover
+			:background white
+	ul.social
+		:list-style none
+		:text-align center
+		:padding 0
+		:margin 0
+		:position absolute
+		:bottom 60px
+		:width 100%
+		li
+			:width 32px
+			:heigth 32px
+			:background white
+			:border-radius 50%
+			:line-height 32px
 			:display inline-block
-			:position fixed
-			:top 150px
-			li
-				:list-style none
-				:font-family $body-font
-				:font-size 14px
-				:line-height 24px
-				:margin-bottom 10px
-				a
-					:text-decoration none
-					:color $black
-					&:hover
-						:text-decoration underline
-	&__logo
-		:width 80px
-		:margin-top 20px
-		:position fixed
-
-footer
-	:font-family $body-font
-	:background #555
-	:color $light-grey
-	:font-weight 100
-	:padding 20px 0
-	:font-size 14px
+			:margin-right 16px
+			&:last-of-type
+				:margin-right 0
+			a
+				:color #333
+				:border-bottom none
+.nav--sign-in
+	:width 60%
+	:margin-left 40%
+	:list-style none
+	:padding 0
+	:text-align right
+	li
+		:display inline-block
+		:margin-right 20px
 	a
 		:text-decoration none
-		:color white
-		:font-weight 600
-		&:hover
-			:color $green
-	.col-half
-		p
-			+display-for(md lg xl)
-				:padding-left 50px
-	p
-		:margin 0
-		:text-shadow 0 2px 5px rgba(0, 0, 0, 0.45)
-	ul
-		:margin 0
-		:padding 0
-		:list-style none
-		+display-for(sm xs)
-			:margin-top 14px
-			:margin-bottom 24px
-		li
-			:margin-bottom 8px
-			:float left
-			+display-for(sm xs)
-				:width 33.33%
-				:display inline-block
-				:text-align center
-				:margin-bottom 0
-				span
-					:display none
-			&:last-of-type
-				:margin-bottom 0
-			a
-				:color $light-grey
-		i
-			:width 32px
-			:height 32px
-			:background $light-grey
-			:color $black
-			:border-radius 50%
-			:text-align center
-			:margin-right 1em
-			:box-shadow 0 3px 7px 0 rgba(0, 0, 0, 0.45)
-			+display-for(sm xs)
-				:margin-right 0
-			&:before
-				:line-height 32px
-				:font-size 18px
-			&:hover
-				:background $green
+		:color #333
+		:border-bottom none

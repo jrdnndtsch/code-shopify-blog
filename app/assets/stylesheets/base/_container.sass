@@ -1,9 +1,9 @@
+$light-grey: rgba(220,220,220, 0.8)
 .container
-	@extend %make-adaptive
 	:box-sizing border-box
 	:position relative
 	+display-for(xl lg md sm)
-		:margin 0 auto
+		:padding 0 5%
 	+display-for(xs)
 		:margin 0
 		:padding 0 12px
@@ -12,3 +12,26 @@
 		:align-items stretch
 		:flex-wrap wrap
 		:flex 1 0 50%
+		:justify-content space-around
+.site-content
+	:margin-left 25%
+	:padding 20px 0
+	.col--three
+		:background $light-grey
+		:padding 10% 0
+		:text-align center
+		:cursor pointer
+		:position relative
+		&:hover
+			:background darken($light-grey, 5%)
+		a
+			:color #333
+			:text-decoration none
+			:border-bottom none
+		a.post--link
+			:border-bottom none
+			:position absolute
+			:top 0
+			:left 0
+			:width 100%
+			:height 100%

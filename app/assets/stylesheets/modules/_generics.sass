@@ -3,7 +3,7 @@ body
 	h1, h2, h3, h4, h5, h6
 		:font-family $header-font
 		:letter-spacing 1.2px
-		:font-weight 700
+		:font-weight 100
 	.center
 		:text-align center
 	p
@@ -15,9 +15,14 @@ body
 
 	:color $black
 
+	a
+		:color $black
+		:border-bottom 3px solid rgba(181,255,235,1)
+		:text-decoration none
+
 	pre
 		:padding 25px
 	.hidden
 		:display none
-
-
+.notice, .alert, #notice
+	:margin 0

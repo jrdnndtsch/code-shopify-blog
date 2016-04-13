@@ -2,8 +2,8 @@
 
 <br><br>
 <div class="container">
-  <div class="blog-post">
-    <h2><%= @blog_post.title %></h2>
+  <div class="post">
+    <h2 class="post--title"><%= @blog_post.title %></h2>
     <p><%= @blog_post.created_at.strftime('%A, %b %d') %></p>
     <% if @blog_post.photo.present? %>
       <%= image_tag @blog_post.photo.url %>
