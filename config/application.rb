@@ -26,8 +26,8 @@ module D3blog
     config.paperclip_defaults = {
     storage: :s3,
     s3_credentials: {
-        access_key_id: ENV['S3_KEY_ID'],
-        secret_access_key: ENV['S3_SECRET_KEY'],
+        access_key_id: ENV['AWS_KEY_ID'],
+        secret_access_key: ENV['AWS_KEY'],
         bucket: "D3blog"
         }
     }

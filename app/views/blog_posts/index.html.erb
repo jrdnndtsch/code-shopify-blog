@@ -1,63 +1,11 @@
+<div class="container">
+  <% @blog_posts.each do |post|  %>
 
-  <div class="container">
-    <div class="center">
-      <h4>A collaborative effort to bring d3.js knowledge to the masses</h4>
+    <div class="single--post">
+      <h2><%= link_to post.title, post%></h2>
     </div>
-  </div>
-  <div class="container container--flex">
-    <div class="col--twothirds">
-      <% @blog_posts.each do |blog_post| %>
-        <div class="blog-post">
-          <%=link_to blog_post do %><h2><%= blog_post.title %></h2> <% end %>
-          <% if blog_post.user.present?%>
-            <div class="author-post col--three">
-              <a href="http://<%= blog_post.user.profile.website_url%>" target="_blank"><%= image_tag blog_post.user.profile.avatar.url(:small), class: 'profile-img' %>
-              <h4><%= blog_post.author%></h4></a>
-            </div>
-          <% end %>
-          <p><%= blog_post.created_at.strftime('%A, %b %d') %></p>
-          <% if blog_post.photo.present? %>
-            <%= image_tag blog_post.photo.url%>
-          <% end %>
-          <p><%= blog_post.excerpt.html_safe %></p>
-          <p><%= link_to 'Read More...', blog_post %></p>
-
-          <% if blog_post.belongs_to_current_user?(current_user) %>
-            <p><%= link_to 'Edit', edit_blog_post_path(blog_post), class: 'button' %></p>
-          <% end %>
-        </div>
-      <% end %>
-    </div>
-    <div class="side-bar col--three">
-      <%= link_to blog_posts_path do%>
-        <h2>Authors</h2>
-      <% end %>
-        <% @authors.each do |author|%>
-          <% if author.blog_posts.present? && author.profile.avatar.present? %>
-            <!-- <a href="http://<%= author.profile.website_url%>" target="_blank"> -->
-            <%= link_to blog_posts_path(author: author) do %>
-              <%= image_tag author.profile.avatar.url(:small), class: 'author-img'%>
-            <% end%>
-          <% end %>
-        <% end %>
-        <hr>
-        <%= link_to blog_posts_path do %>
-          <h2>Tags</h2>
-        <% end %>
-          <ul>
-            <% @tags.each do |tag|%>
-              <li><%= link_to blog_posts_path(tag: tag.name), class: 'button-tag' do %>
-                <%= tag %>
-              <% end %></li>
-            <% end %>
-
-          </ul>
-    </div>
-
-
-  </div> <!-- /.container -->
-
-<br>
+  <% end %>
+</div>
 
 <%= will_paginate @blog_posts, class: 'paginate' %>
 
