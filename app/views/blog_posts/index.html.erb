@@ -2,8 +2,10 @@
   <% @blog_posts.each do |post|  %>
 
     <div class="col--three">
-      <h2><%= link_to post.title, post%></h2>
-      <%= link_to '', post, class:'post--link'%>
+      <div>
+        <h2><%= link_to post.title, post%></h2>
+        <%= link_to '', post, class:'post--link'%>
+      </div>
     </div>
   <% end %>
 </div>

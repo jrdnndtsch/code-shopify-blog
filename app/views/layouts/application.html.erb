@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Code Shopify | Tutorials</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <script src="http://d3js.org/d3.v3.min.js"></script>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -25,15 +26,20 @@
 
 
   <div class="sidebar">
-    <%= image_tag 'logo.svg'%>
-    <h1>Code Shopify</h1>
-    <%= link_to 'Blog', blog_posts_path %>
-    <%= link_to 'About', about_path %>
+    <%= link_to blog_posts_path do%>
+      <%= image_tag 'logo.svg'%>
+      <h1>Code Shopify</h1>
+    <% end %>
+    <%= link_to 'Blog', blog_posts_path, class: 'menu-link' %>
+    <%= link_to 'About', about_path, class: 'menu-link' %>
+
+
     <ul class="social">
       <li><a href="https://twitter.com/up_at_five" target="_blank"><i class="fa fa-twitter"></i></a></li><!--
         *--><li><a href="https://www.facebook.com/upat5/" target="_blank"><i class="fa fa-facebook"></i></a></li><!--
         *--><li><a href="https://www.instagram.com/up_at_five/" target="_blank"><i class="fa fa-instagram"></i></a></li>
       </ul>
+      <form class="form--subscribtion"action="https://tinyletter.com/up_at_five" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/up_at_five', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true"><p><input type="text" name="email" id="tlemail" /></p><input type="hidden" value="1" name="embed"/><input type="submit" value="join our email list" /></form>
   </div>
 
   <div class="site-content">
