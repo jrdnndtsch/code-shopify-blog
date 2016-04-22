@@ -16,6 +16,8 @@ $light-grey: rgba(220,220,220, 0.8)
 .site-content
 	:margin-left 25%
 	:padding 20px 0
+	+display-for(md sm xs)
+		:margin-left 0
 	.col--three
 		:background $light-grey
 		:padding 20px
@@ -23,6 +25,7 @@ $light-grey: rgba(220,220,220, 0.8)
 		:cursor pointer
 		:position relative
 		:padding-bottom 28%
+		:margin-bottom 30px
 		&:hover
 			:background darken($light-grey, 5%)
 		h2
@@ -34,6 +37,7 @@ $light-grey: rgba(220,220,220, 0.8)
 			:transform translate(-50%, -50%)
 			:margin 0
 			:padding 0 20px
+			:line-height 28px
 		a
 			:color #333
 			:text-decoration none

@@ -7,20 +7,33 @@
 	:left 0
 	:height 100%
 	:padding-top 40px
-	img
-		:width 80px
-	h1
-		:margin 0
-		:font-size 18px
-		:font-family 'Andale Mono', monospace
-		:margin-bottom 80px
-		:font-weight bold
+	+display-for(md sm xs)
+		:width 100%
+		:position static
+		:padding 16px 0
+		:text-align left
+	.logo
+		+display-for(md sm xs)
+			:display inline-block
+			:vertical-align middle
+			:margin-left 10%
+		img
+			:width 80px
+			+display-for(md sm xs)
+				:width 100%
+				:max-width 60px
+		h1
+			:margin 0
+			:font-size 18px
+			:font-family 'Andale Mono', monospace
+			:margin-bottom 80px
+			:font-weight bold
+			+display-for(md sm xs)
+				:display none
 	a
 		:border none
 
 	> a.menu-link
-		:display block
-		:width 100%
 		:text-align center
 		:padding 20px
 		:font-size 20px
@@ -29,23 +42,47 @@
 		:border-bottom none
 		&:hover
 			:background white
+		+display-for(lg xl)
+			:display block
+			:width 100%
+		+display-for(md sm xs)
+			:display inline-block
+			:vertical-align middle
+			:padding 10px
+			&:hover
+				:background transparent
+				:color lighten(#333, 10%)
 	.form--subscribtion
 		:position absolute
 		:bottom 20px
 		:width 100%
+		+display-for(md sm xs)
+			:position static
 		input
 			:width 80%
+			+display-for(md sm xs)
+				:margin 0 auto
+				:padding 4px
 		input[type=text]
 			:margin-bottom 16px
-			
+
 	ul.social
 		:list-style none
 		:text-align center
 		:padding 20px 0
 		:margin 0
-		// :position absolute
-		// :bottom 60px
-		:width 100%
+		+display-for(lg xl)
+			:width 100%
+		+display-for(md sm xs)
+			:vertical-align middle
+			:display inline-block
+			:padding 0
+			:margin-right 10%
+			:float right
+			:padding 20px 0
+		+display-for(xs)
+			:width 100%
+			:margin 0	
 		li
 			:width 32px
 			:heigth 32px
