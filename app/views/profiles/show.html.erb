@@ -18,7 +18,7 @@
 
 
   <% @blog_posts.each do |blog_post| %>
-    <div class="blog-post">
+    <div class="blog-post profile-post">
       <h2><%= blog_post.title %></h2>
       <p><%= blog_post.created_at.strftime('%A, %b %d') %></p>
       <p><%= blog_post.excerpt.html_safe %></p>

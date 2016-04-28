@@ -30,19 +30,21 @@
       <%= image_tag 'logo.svg'%>
       <h1>Code Shopify</h1>
     <% end %>
-    <%= link_to 'Blog', blog_posts_path, class: 'menu-link' %>
-    <%= link_to 'About', about_path, class: 'menu-link' %>
-
-
-    <ul class="social">
-      <li><a href="https://twitter.com/up_at_five" target="_blank"><i class="fa fa-twitter"></i></a></li><!--
-        *--><li><a href="https://www.facebook.com/upat5/" target="_blank"><i class="fa fa-facebook"></i></a></li><!--
-        *--><li><a href="https://www.instagram.com/up_at_five/" target="_blank"><i class="fa fa-instagram"></i></a></li>
-      </ul>
-      <form class="form--subscribtion"action="https://tinyletter.com/up_at_five" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/up_at_five', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true"><p><input type="text" name="email" id="tlemail" /></p><input type="hidden" value="1" name="embed"/><input type="submit" value="join our email list" /></form>
+    <p class="description">Shopify App and Theme Development tutorials for those who are farmiliar with code and want to dive into Shopify.</p>
+      <form class="form--subscribtion"action="https://tinyletter.com/up_at_five" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/up_at_five', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true"><input type="text" name="email" id="tlemail" /><input type="hidden" value="1" name="embed"/><input type="submit" value="join our email list" /></form>
   </div>
 
   <div class="site-content">
+    <nav class="container">
+      <%= link_to 'About', about_path, class: 'menu-link' %>
+      <%= link_to 'Blog', blog_posts_path, class: 'menu-link' %>
+      <%= link_to 'Roadmap', roadmap_path, class: 'menu-link'%>
+      <ul class="social">
+        <li><a href="https://twitter.com/up_at_five" target="_blank"><i class="fa fa-twitter"></i></a></li><!--
+          *--><li><a href="https://www.facebook.com/upat5/" target="_blank"><i class="fa fa-facebook"></i></a></li><!--
+          *--><li><a href="https://www.instagram.com/up_at_five/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+      </ul>
+    </nav>
     <%= yield %>
   </div>
 
