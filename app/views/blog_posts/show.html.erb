@@ -4,7 +4,7 @@
 <div class="container">
   <div class="post">
     <h2 class="post--title"><%= @blog_post.title %></h2>
-    <p><%= @blog_post.created_at.strftime('%A, %b %d') %></p>
+    <p><%= @blog_post.created_at.strftime('%A, %b %d, %Y') %></p>
     <% if @blog_post.photo.present? %>
       <%= image_tag @blog_post.photo.url %>
     <% end %>
