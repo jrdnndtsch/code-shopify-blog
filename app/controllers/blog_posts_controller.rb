@@ -6,12 +6,12 @@ class BlogPostsController < ApplicationController
   # GET /blog_posts.json
   def index
     if params[:author]
-      @blog_posts = BlogPost.by_author(params[:author]).published?.order(created_at: :desc).paginate(:page => params[:page], :per_page => 10)
+      @blog_posts = BlogPost.by_author(params[:author]).published?.order(created_at: :desc).paginate(:page => params[:page], :per_page => 9)
     elsif params[:tag]
-      @blog_posts = BlogPost.tagged_with(params[:tag]).published?.order(created_at: :desc).paginate(:page => params[:page], :per_page => 10)
+      @blog_posts = BlogPost.tagged_with(params[:tag]).published?.order(created_at: :desc).paginate(:page => params[:page], :per_page => 9)
       # raise "hell"
     else
-      @blog_posts = BlogPost.published?.order(created_at: :desc).paginate(:page => params[:page], :per_page => 10)
+      @blog_posts = BlogPost.published?.order(created_at: :desc).paginate(:page => params[:page], :per_page => 9)
     end
     @authors = User.all.includes(:blog_posts)
     @tags = ActsAsTaggableOn::Tag.all.where.not(taggings_count: 0).order(taggings_count: :desc)
