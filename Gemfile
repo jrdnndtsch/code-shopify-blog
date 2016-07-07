@@ -11,6 +11,9 @@ gem 'devise'
 #vanity URLs
 gem 'friendly_id', '~> 5.1.0'
 
+#converts numbers to their word
+gem 'to_words'
+
 #Pagination
 gem 'will_paginate'
 

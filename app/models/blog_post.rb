@@ -1,5 +1,7 @@
 class BlogPost < ActiveRecord::Base
 
+  CATEGORIES = ['Theme', 'App']
+
   extend FriendlyId
     friendly_id :title, use: :slugged
 
@@ -16,6 +18,10 @@ class BlogPost < ActiveRecord::Base
 
   scope :published?, -> {
     where(published: true)
+  }
+
+  scope :by_category, -> (road_map_category) {
+    where(road_map_category: road_map_category)
   }
 
 

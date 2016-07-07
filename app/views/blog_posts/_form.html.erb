@@ -1,34 +1,48 @@
-<%= form_for(@blog_post) do |f| %>
-  <% if @blog_post.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@blog_post.errors.count, "error") %> prohibited this blog_post from being saved:</h2>
+<div class="container ">
+  
+  <%= form_for(@blog_post) do |f| %>
+    <% if @blog_post.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@blog_post.errors.count, "error") %> prohibited this blog_post from being saved:</h2>
 
-      <ul>
-      <% @blog_post.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+        <ul>
+        <% @blog_post.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.text_field :title, placeholder: "title" %>
+    </div>
+    <div class="field">
+      <%= f.label :photo%>
+      <%= f.file_field :photo %>
+    </div>
+    <div class="container--flex">
+      <div class="field col--two">
+        <%= f.label :road_map_category %>
+        <%= f.collection_select :road_map_category, BlogPost::CATEGORIES, :to_s, :to_s, {:prompt => 'Category'}%>
+      </div>
+      <div class="field col--two">
+        <%= f.label :road_map_order %>
+        <%= f.text_field :road_map_order %>
+      </div>
+    </div>
+
+    <div class="field">
+      <%= f.text_area :content, placeholder: "content" %>
+    </div>
+    <div class="field">
+      <%= f.text_field :tag_list,value: @blog_post.tag_list.to_s, placeholder:"add tags seperated by commas" %>
+    </div>
+    <div class="field">
+      <%= f.label :published %>
+      <%= f.check_box :published %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.text_field :title, placeholder: "title" %>
-  </div>
-  <div class="field">
-  <%= f.label :photo%>
-    <%= f.file_field :photo %>
-  </div>
-  <div class="field">
-    <%= f.text_area :content, placeholder: "content" %>
-  </div>
-  <div class="field">
-    <%= f.text_field :tag_list,value: @blog_post.tag_list.to_s, placeholder:"add tags seperated by commas" %>
-  </div>
-  <div class="field">
-    <%= f.label :published %>
-    <%= f.check_box :published %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+</div>
