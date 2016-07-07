@@ -1,6 +1,6 @@
 .sidebar
 	:text-align center
-	:background linear-gradient(to bottom, rgba(181,255,235,0.4) 0%, rgba(181,255,235,0.4) 59%, rgba(181,255,235,1) 100%)
+	:background-color #111
 	:width 25%
 	:position fixed
 	:top 0
@@ -17,6 +17,7 @@
 		:margin 0 auto
 		:text-align center
 		:font-size 14px
+		:color #eee
 		+display-for(md sm xs)
 			:display none	
 	.logo
@@ -32,10 +33,11 @@
 				:max-width 60px
 		h1
 			:margin 0
-			:font-size 16px
+			:font-size 18px
 			:font-family 'Andale Mono', monospace
 			:margin-bottom 40px
 			:font-weight bold
+			:color #eee
 			+display-for(md sm xs)
 				:display none
 	a
@@ -43,6 +45,7 @@
 
 	> a.menu-link
 		:text-align center
+		:font-family "Andale Mono", monospace
 		:padding 20px
 		:font-size 20px
 		:text-decoration none
@@ -96,25 +99,26 @@ nav.container
 		:display inline-block
 		:border none
 		:margin-right 16px
+		:font-family "Andale Mono", monospace
+		:text-shadow 0 2px 2px rgba(0, 0, 0, 0.07)
+		&:before
+			:content ''
+			:display block
+			:position relative
+			:margin-top -2px
+			:width 0
+			:top 1.8em
+			:border-bottom 5px solid #b5ffeb
+			:transition width .4s
+		&:hover
+			&:before
+				:width 100%
 ul.social
 	:list-style none
 	:text-align center
 	:padding 0
 	:margin 0
-	:display inline-block
-	// :margin 0
-	// +display-for(lg xl)
-	// 	:width 100%
-	// +display-for(md sm xs)
-	// 	:vertical-align middle
-	// 	:display inline-block
-	// 	:padding 0
-	// 	:margin-right 10%
-	// 	:float right
-	// 	:padding 20px 0
-	// +display-for(xs)
-	// 	:width 100%
-	// 	:margin 0	
+	:display inline-block	
 	li
 		:width 32px
 		:heigth 32px
@@ -127,7 +131,11 @@ ul.social
 			:margin-right 0
 		a
 			:color #333
+			:text-shadow 0 2px 2px rgba(0, 0, 0, 0.07)
 			:border-bottom none
+			:transition all .2s
+			&:hover
+				:color #b5ffeb
 .nav--sign-in
 	:width 60%
 	:margin-left 40%
