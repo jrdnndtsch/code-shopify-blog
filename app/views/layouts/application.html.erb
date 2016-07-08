@@ -22,8 +22,8 @@
 
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
 
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true, :cache => 'cached/all' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true, :cache => 'cached/all' %>
   <%= csrf_meta_tags unless response.cache_control[:public] %>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
