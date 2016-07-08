@@ -15,13 +15,15 @@ class BlogPostsController < ApplicationController
     end
     # @authors = User.all.includes(:blog_posts)
     # @tags = ActsAsTaggableOn::Tag.all.where.not(taggings_count: 0).order(taggings_count: :desc)
-    fresh_when etag: @blog_posts, last_modified: @blog_posts.maximum(:updated_at)
+    fresh_when etag: @blog_posts, last_modified: @blog_posts.maximum(:updated_at), public: true
+    expires_in 5.minutes
     # fresh_when etag: [@authors, @tags]
   end
 
   # GET /blog_posts/1
   # GET /blog_posts/1.json
   def show
+    expires_in 5.minutes
   end
 
   # GET /blog_posts/new
@@ -87,12 +89,12 @@ class BlogPostsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_blog_post
       @blog_post = BlogPost.friendly.find(params[:id])
-      fresh_when etag: @blog_post, last_modified: @blog_post.updated_at
+      fresh_when etag: @blog_post, last_modified: @blog_post.updated_at, public: true
     end
 
     def user_owns_blog_post?
       @blog_post.user == current_user
-      fresh_when etag: @blog_post, last_modified: @blog_post.updated_at
+      fresh_when etag: @blog_post, last_modified: @blog_post.updated_at, public: true
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
