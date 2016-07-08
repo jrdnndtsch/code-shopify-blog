@@ -13,8 +13,10 @@ class BlogPostsController < ApplicationController
     else
       @blog_posts = BlogPost.published?.order(created_at: :desc).paginate(:page => params[:page], :per_page => 9)
     end
-    @authors = User.all.includes(:blog_posts)
-    @tags = ActsAsTaggableOn::Tag.all.where.not(taggings_count: 0).order(taggings_count: :desc)
+    # @authors = User.all.includes(:blog_posts)
+    # @tags = ActsAsTaggableOn::Tag.all.where.not(taggings_count: 0).order(taggings_count: :desc)
+    fresh_when etag: @blog_posts, last_modified: @blog_posts.maximum(:updated_at)
+    # fresh_when etag: [@authors, @tags]
   end
 
   # GET /blog_posts/1
@@ -85,10 +87,12 @@ class BlogPostsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_blog_post
       @blog_post = BlogPost.friendly.find(params[:id])
+      fresh_when etag: @blog_post, last_modified: @blog_post.updated_at
     end
 
     def user_owns_blog_post?
       @blog_post.user == current_user
+      fresh_when etag: @blog_post, last_modified: @blog_post.updated_at
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
