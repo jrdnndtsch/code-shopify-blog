@@ -7,7 +7,7 @@ gem 'rails', '4.2.5'
 #for Authentification
 gem 'devise'
 
-
+gem 'rack-cache'
 #vanity URLs
 gem 'friendly_id', '~> 5.1.0'
 
