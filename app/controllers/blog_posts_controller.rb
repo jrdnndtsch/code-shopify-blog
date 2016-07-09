@@ -16,14 +16,14 @@ class BlogPostsController < ApplicationController
     # @authors = User.all.includes(:blog_posts)
     # @tags = ActsAsTaggableOn::Tag.all.where.not(taggings_count: 0).order(taggings_count: :desc)
     fresh_when etag: @blog_posts, last_modified: @blog_posts.maximum(:updated_at), public: true
-    expires_in 5.minutes
+    expires_in 5.minutes, :public
     # fresh_when etag: [@authors, @tags]
   end
 
   # GET /blog_posts/1
   # GET /blog_posts/1.json
   def show
-    expires_in 5.minutes
+    expires_in 5.minutes, :public
   end
 
   # GET /blog_posts/new
