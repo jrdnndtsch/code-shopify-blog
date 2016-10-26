@@ -23,7 +23,7 @@ class BlogPostsController < ApplicationController
   # GET /blog_posts/1
   # GET /blog_posts/1.json
   def show
-    expires_in 5.minutes
+    # expires_in 5.minutes
   end
 
   # GET /blog_posts/new
@@ -89,7 +89,7 @@ class BlogPostsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_blog_post
       @blog_post = BlogPost.friendly.find(params[:id])
-      fresh_when etag: @blog_post, last_modified: @blog_post.updated_at, public: true
+      # fresh_when etag: @blog_post, last_modified: @blog_post.updated_at, public: true
     end
 
     def user_owns_blog_post?
