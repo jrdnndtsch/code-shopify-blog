@@ -97,7 +97,7 @@
 			:margin-bottom 16px
 nav.container
 	:text-align right
-	:margin-bottom 40px
+	:margin-bottom 20px
 	+display-for(sm xs)
 		:margin-bottom 20px
 	> a 
@@ -113,7 +113,7 @@ nav.container
 			:margin-top -2px
 			:width 0
 			:top 1.8em
-			:border-bottom 5px solid #b5ffeb
+			:border-bottom 5px solid $accent-color
 			:transition width .4s
 		&:hover
 			&:before
@@ -140,7 +140,7 @@ ul.social
 			:border-bottom none
 			:transition all .2s
 			&:hover
-				:color #b5ffeb
+				:color $accent-color
 .nav--sign-in
 	:width 60%
 	:margin-left 40%
@@ -154,3 +154,28 @@ ul.social
 		:text-decoration none
 		:color #333
 		:border-bottom none
+.search 
+	:text-align right
+	:margin-bottom 40px
+	:font-size 24px
+	:padding-right 5%
+	:justify-content flex-end
+	:align-items center
+	.fa-search
+		:background-color white
+		:padding 5px
+		:cursor pointer
+		:transition all 0.3s
+		&:hover
+			color: $accent-color
+	form 
+		:width 95%
+		:transition all 0.3s
+		input
+			:margin 0
+			:padding 0.5%
+			:padding-left 12px
+	.search-form
+		:transition all 0.5s
+	.no-width
+		:width 0

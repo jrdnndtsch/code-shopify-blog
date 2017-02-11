@@ -1,0 +1,1262 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ */
+/* line 1, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/_normalize.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+  display: block;
+}
+
+/* line 1, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/_normalize.scss */
+audio, canvas, video {
+  display: inline-block;
+}
+
+/* line 1, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/* line 1, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/_normalize.scss */
+[hidden] {
+  display: none;
+}
+
+/* line 1, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/_normalize.scss */
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/* line 1, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/_normalize.scss */
+a:focus {
+  outline: thin dotted;
+}
+
+/* line 1, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/_normalize.scss */
+a:active, a:hover {
+  outline: 0;
+}
+
+/* line 1, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/_normalize.scss */
+h1 {
+  font-size: 2em;
+}
+
+/* line 1, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/_normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/* line 1, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/_normalize.scss */
+b, strong {
+  font-weight: 700;
+}
+
+/* line 1, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/_normalize.scss */
+dfn {
+  font-style: italic;
+}
+
+/* line 1, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/_normalize.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/* line 1, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/_normalize.scss */
+code, kbd, pre, samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+/* line 1, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/_normalize.scss */
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* line 1, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/_normalize.scss */
+q {
+  quotes: \201C \201D \2018 \2019;
+}
+
+/* line 1, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/_normalize.scss */
+small {
+  font-size: 80%;
+}
+
+/* line 1, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/_normalize.scss */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 1, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/_normalize.scss */
+sup {
+  top: -.5em;
+}
+
+/* line 1, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/_normalize.scss */
+sub {
+  bottom: -.25em;
+}
+
+/* line 1, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/_normalize.scss */
+img {
+  border: 0;
+}
+
+/* line 1, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* line 1, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/_normalize.scss */
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: .35em .625em .75em;
+}
+
+/* line 1, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/_normalize.scss */
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+}
+
+/* line 1, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/_normalize.scss */
+button, input {
+  line-height: normal;
+}
+
+/* line 1, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/_normalize.scss */
+button, html input[type=button],
+input[type=reset], input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+/* line 2, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/_normalize.scss */
+button[disabled], input[disabled] {
+  cursor: default;
+}
+
+/* line 2, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/_normalize.scss */
+input[type=checkbox], input[type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/* line 2, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/_normalize.scss */
+input[type=search] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+/* line 2, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/_normalize.scss */
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* line 2, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/_normalize.scss */
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+/* line 2, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/_normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 2, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/_normalize.scss */
+body, figure {
+  margin: 0;
+}
+
+/* line 2, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/_normalize.scss */
+legend, button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* line 4, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/_normalize.scss */
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+/* line 6, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/_normalize.scss */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 6, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/_blog_posts.css.scss */
+body {
+  background: #fff;
+}
+
+/* line 9, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/_blog_posts.css.scss */
+h1 {
+  color: red;
+}
+
+/* line 13, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/_blog_posts.css.scss */
+hr {
+  margin: 15% 5%;
+  background-color: #000;
+  border-top: solid 1px #999;
+  border-left: none;
+  height: 0px;
+}
+
+/* line 33, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/_blog_posts.css.scss */
+.blog-post h2 {
+  text-align: center;
+}
+
+/* line 41, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/_blog_posts.css.scss */
+.side-bar {
+  background-color: white;
+  padding: 5%;
+  margin-bottom: 1.5%;
+  box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.12);
+  width: 98%;
+}
+
+/* line 57, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/_blog_posts.css.scss */
+.spheres {
+  height: 558px;
+  background-color: white;
+  box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.12);
+}
+
+/* line 63, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/_blog_posts.css.scss */
+.author-post {
+  padding: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+/* line 67, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/_blog_posts.css.scss */
+.author-post h4 {
+  text-align: center;
+}
+/* line 70, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/_blog_posts.css.scss */
+.author-post .profile-img {
+  width: 120px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+/* line 77, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/_blog_posts.css.scss */
+.profile-img {
+  width: 120px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+/* line 83, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/_blog_posts.css.scss */
+.author-img {
+  width: 30%;
+  margin: 1%;
+  border-radius: 50%;
+}
+
+/* line 88, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/_blog_posts.css.scss */
+.title {
+  font-size: 80px;
+  color: whitesmoke;
+  font-family: sans-serif;
+  text-shadow: 0px 0px 7px black, 0px 0px 60px black, 0px 0px 60px black, 0px 0px 60px black;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 200px;
+  /*background: rgba(255,255,255, 0.5);*/
+}
+
+/* line 99, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/_blog_posts.css.scss */
+.title span {
+  color: #83AF9B;
+}
+
+/* line 103, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/_blog_posts.css.scss */
+.paginate {
+  text-align: center;
+}
+
+/**
+ * Monokai theme
+ *
+ * Adapted from Wimer Hazenberg's TextMate theme of the same name
+ *
+ * @author Wimer Hazenberg
+ * @author Michael Fasani
+ * @author Craig Campbell
+ * @version 1.0.0
+ */
+/* line 11, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/theme.css */
+pre {
+  background: #272822;
+  word-wrap: break-word;
+  margin: 0px;
+  padding: 10px;
+  color: #fff;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* line 21, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/theme.css */
+pre, code {
+  font-family: 'Monaco', courier, monospace;
+}
+
+/* line 25, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/theme.css */
+pre .comment {
+  color: #75715E;
+}
+
+/* line 29, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/theme.css */
+pre .constant {
+  color: #AE81FF;
+}
+
+/* line 33, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/theme.css */
+pre .storage {
+  color: #66D9EF;
+}
+
+/* line 37, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/theme.css */
+pre .string, pre .comment.docstring {
+  color: #E6DB74;
+}
+
+/* line 41, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/theme.css */
+pre .support.tag {
+  color: #fff;
+}
+
+/* line 45, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/theme.css */
+pre .keyword {
+  /* @todo some keywords use this light blue, most use the pink */
+  /*color: #66D9EF;*/
+  color: #F92672;
+}
+
+/* line 51, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/theme.css */
+pre .selector {
+  color: #F92672;
+}
+
+/* line 55, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/theme.css */
+pre .inherited-class {
+  font-style: italic;
+}
+
+/* line 59, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/theme.css */
+pre .operator, pre .support.tag-name, pre .entity.tag {
+  color: #F92672;
+}
+
+/* line 63, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/theme.css */
+pre .entity, pre .support.attribute, pre .entity.attribute {
+  color: #A6E22E;
+}
+
+/* line 67, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/theme.css */
+pre .support, *[data-language="c"] .function.call {
+  color: #66D9EF;
+}
+
+/* line 71, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/theme.css */
+*[data-language="html"] .support.operator {
+  color: #fff;
+}
+
+/* line 75, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/theme.css */
+pre .css-property, pre .storage.function {
+  font-style: italic;
+}
+
+/* line 79, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/theme.css */
+pre .variable.global, pre .variable.class, pre .variable.instance {
+  color: #A6E22E;
+}
+
+/* line 2, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/base/_container.sass */
+.container {
+  box-sizing: border-box;
+  position: relative;
+}
+@media screen and (min-width: 1170px) {
+  /* line 2, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/base/_container.sass */
+  .container {
+    padding: 0 5%;
+  }
+}
+@media screen and (min-width: 960px) and (max-width: 1169px) {
+  /* line 2, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/base/_container.sass */
+  .container {
+    padding: 0 5%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  /* line 2, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/base/_container.sass */
+  .container {
+    padding: 0 5%;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 767px) {
+  /* line 2, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/base/_container.sass */
+  .container {
+    padding: 0 5%;
+  }
+}
+@media screen and (max-width: 599px) {
+  /* line 2, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/base/_container.sass */
+  .container {
+    margin: 0;
+    padding: 0 12px;
+  }
+}
+/* line 10, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/base/_container.sass */
+.container--flex {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: flex;
+  -webkit-align-items: stretch;
+  align-items: stretch;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-flex: 1 0 50%;
+  flex: 1 0 50%;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+/* line 22, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/base/_container.sass */
+.site-content {
+  margin-left: 25%;
+  padding: 20px 0;
+}
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  /* line 22, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/base/_container.sass */
+  .site-content {
+    margin-left: 0;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 767px) {
+  /* line 22, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/base/_container.sass */
+  .site-content {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 599px) {
+  /* line 22, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/base/_container.sass */
+  .site-content {
+    margin-left: 0;
+  }
+}
+/* line 27, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/base/_container.sass */
+.site-content .col--three {
+  background: rgba(220, 220, 220, 0.8);
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  margin-bottom: 30px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s;
+}
+/* line 37, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/base/_container.sass */
+.site-content .col--three:hover, .site-content .col--three:focus {
+  background: rgba(207, 207, 207, 0.8);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+}
+/* line 40, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/base/_container.sass */
+.site-content .col--three .blog-post {
+  padding-bottom: 100%;
+}
+@media screen and (min-width: 600px) and (max-width: 767px) {
+  /* line 40, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/base/_container.sass */
+  .site-content .col--three .blog-post {
+    padding-bottom: 25%;
+  }
+}
+@media screen and (max-width: 599px) {
+  /* line 40, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/base/_container.sass */
+  .site-content .col--three .blog-post {
+    padding-bottom: 25%;
+  }
+}
+/* line 44, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/base/_container.sass */
+.site-content .col--three h2 {
+  font-size: 18px;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0 20px;
+  line-height: 28px;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+}
+/* line 56, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/base/_container.sass */
+.site-content .col--three a {
+  color: #333;
+  text-decoration: none;
+  border-bottom: none;
+}
+/* line 60, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/base/_container.sass */
+.site-content .col--three a.post--link {
+  border-bottom: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 68, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/base/_container.sass */
+.paginate a {
+  border-bottom: none;
+}
+/* line 70, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/base/_container.sass */
+.paginate a:hover {
+  color: #78D18B;
+}
+/* line 72, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/base/_container.sass */
+.paginate .current {
+  color: #78D18B;
+}
+/* line 75, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/base/_container.sass */
+.paginate .disabled:hover {
+  color: #333;
+}
+
+/* line 3, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/base/_grid.sass */
+.container .col--two {
+  box-sizing: border-box;
+  width: 50%;
+}
+@media screen and (max-width: 599px) {
+  /* line 3, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/base/_grid.sass */
+  .container .col--two {
+    box-sizing: border-box;
+    width: 100%;
+  }
+}
+/* line 7, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/base/_grid.sass */
+.container .col--three {
+  box-sizing: border-box;
+  width: 30%;
+}
+@media screen and (min-width: 600px) and (max-width: 767px) {
+  /* line 7, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/base/_grid.sass */
+  .container .col--three {
+    box-sizing: border-box;
+    width: 47.5%;
+  }
+  /* line 11, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/base/_grid.sass */
+  .container .col--three:nth-of-type(3n + 3) {
+    box-sizing: border-box;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 599px) {
+  /* line 7, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/base/_grid.sass */
+  .container .col--three {
+    box-sizing: border-box;
+    width: 100%;
+  }
+}
+/* line 15, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/base/_grid.sass */
+.container .col--twothirds {
+  box-sizing: border-box;
+  width: 66.5%;
+}
+@media screen and (min-width: 600px) and (max-width: 767px) {
+  /* line 15, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/base/_grid.sass */
+  .container .col--twothirds {
+    box-sizing: border-box;
+    width: 50%;
+  }
+}
+@media screen and (max-width: 599px) {
+  /* line 15, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/base/_grid.sass */
+  .container .col--twothirds {
+    box-sizing: border-box;
+    width: 100%;
+  }
+}
+/* line 21, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/base/_grid.sass */
+.container .col--four {
+  box-sizing: border-box;
+  width: 25%;
+}
+@media screen and (min-width: 600px) and (max-width: 767px) {
+  /* line 21, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/base/_grid.sass */
+  .container .col--four {
+    box-sizing: border-box;
+    width: 50%;
+  }
+}
+@media screen and (max-width: 599px) {
+  /* line 21, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/base/_grid.sass */
+  .container .col--four {
+    box-sizing: border-box;
+    width: 100%;
+  }
+}
+
+/* line 2, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_generics.sass */
+body {
+  font-family: "Avenir", "Helvetica", sans-serif;
+  color: #333;
+}
+/* line 4, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_generics.sass */
+body h1, body h2, body h3, body h4, body h5, body h6 {
+  font-family: "Avenir", "Helvetica", sans-serif;
+  letter-spacing: 1.2px;
+  font-weight: 100;
+}
+/* line 8, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_generics.sass */
+body .center {
+  text-align: center;
+}
+/* line 10, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_generics.sass */
+body p {
+  font-family: "Avenir", "Helvetica", sans-serif;
+  font-weight: 100;
+  line-height: 28px;
+  word-break: break-word;
+  letter-spacing: 0.5px;
+}
+/* line 16, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_generics.sass */
+body img {
+  width: 100%;
+}
+/* line 21, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_generics.sass */
+body a {
+  color: #333;
+  border-bottom: 3px solid #b5ffeb;
+  text-decoration: none;
+}
+/* line 26, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_generics.sass */
+body pre {
+  padding: 25px;
+}
+/* line 28, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_generics.sass */
+body .hidden {
+  display: none;
+}
+
+/* line 30, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_generics.sass */
+.notice, .alert, #notice {
+  margin: 0;
+}
+
+/* line 1, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+.sidebar {
+  text-align: center;
+  background-color: #111;
+  width: 25%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  padding-top: 40px;
+}
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  /* line 1, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+  .sidebar {
+    width: 100%;
+    position: static;
+    padding: 8px 0;
+    text-align: left;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 767px) {
+  /* line 1, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+  .sidebar {
+    width: 100%;
+    position: static;
+    padding: 8px 0;
+    text-align: left;
+  }
+}
+@media screen and (max-width: 599px) {
+  /* line 1, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+  .sidebar {
+    width: 100%;
+    position: static;
+    padding: 8px 0;
+    text-align: left;
+  }
+}
+/* line 15, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+.sidebar p.description {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 14px;
+  color: #eee;
+}
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  /* line 15, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+  .sidebar p.description {
+    display: none;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 767px) {
+  /* line 15, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+  .sidebar p.description {
+    display: none;
+  }
+}
+@media screen and (max-width: 599px) {
+  /* line 15, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+  .sidebar p.description {
+    display: none;
+  }
+}
+/* line 23, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+.sidebar p.signup {
+  position: absolute;
+  bottom: 170px;
+  width: 90%;
+  margin: 0 15px;
+}
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  /* line 28, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+  .sidebar .logo {
+    display: inline-block;
+    vertical-align: middle;
+    width: 10%;
+    margin-left: 2%;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 767px) {
+  /* line 28, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+  .sidebar .logo {
+    display: inline-block;
+    vertical-align: middle;
+    width: 10%;
+    margin-left: 2%;
+  }
+}
+@media screen and (max-width: 599px) {
+  /* line 28, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+  .sidebar .logo {
+    display: inline-block;
+    vertical-align: middle;
+    width: 10%;
+    margin-left: 2%;
+  }
+}
+/* line 34, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+.sidebar .logo img {
+  width: 60px;
+}
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  /* line 34, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+  .sidebar .logo img {
+    width: 100%;
+    max-width: 60px;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 767px) {
+  /* line 34, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+  .sidebar .logo img {
+    width: 100%;
+    max-width: 60px;
+  }
+}
+@media screen and (max-width: 599px) {
+  /* line 34, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+  .sidebar .logo img {
+    width: 100%;
+    max-width: 60px;
+  }
+}
+/* line 39, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+.sidebar .logo h1 {
+  margin: 0;
+  font-size: 18px;
+  font-family: "Andale Mono", monospace;
+  margin-bottom: 40px;
+  font-weight: bold;
+  color: #eee;
+}
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  /* line 39, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+  .sidebar .logo h1 {
+    display: none;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 767px) {
+  /* line 39, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+  .sidebar .logo h1 {
+    display: none;
+  }
+}
+@media screen and (max-width: 599px) {
+  /* line 39, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+  .sidebar .logo h1 {
+    display: none;
+  }
+}
+/* line 48, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+.sidebar a {
+  border: none;
+}
+/* line 51, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+.sidebar > a.menu-link {
+  text-align: center;
+  font-family: "Andale Mono", monospace;
+  padding: 20px;
+  font-size: 20px;
+  text-decoration: none;
+  color: #333;
+  border-bottom: none;
+}
+/* line 59, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+.sidebar > a.menu-link:hover {
+  background: white;
+}
+@media screen and (min-width: 960px) and (max-width: 1169px) {
+  /* line 51, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+  .sidebar > a.menu-link {
+    display: block;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1170px) {
+  /* line 51, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+  .sidebar > a.menu-link {
+    display: block;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  /* line 51, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+  .sidebar > a.menu-link {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 10px;
+  }
+  /* line 68, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+  .sidebar > a.menu-link:hover {
+    background: transparent;
+    color: #4d4d4d;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 767px) {
+  /* line 51, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+  .sidebar > a.menu-link {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 10px;
+  }
+  /* line 68, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+  .sidebar > a.menu-link:hover {
+    background: transparent;
+    color: #4d4d4d;
+  }
+}
+@media screen and (max-width: 599px) {
+  /* line 51, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+  .sidebar > a.menu-link {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 10px;
+  }
+  /* line 68, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+  .sidebar > a.menu-link:hover {
+    background: transparent;
+    color: #4d4d4d;
+  }
+}
+/* line 71, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+.sidebar .form--subscribtion {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+}
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  /* line 71, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+  .sidebar .form--subscribtion {
+    position: static;
+    display: inline-block;
+    width: 80%;
+  }
+  /* line 79, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+  .sidebar .form--subscribtion input {
+    display: inline-block;
+  }
+  /* line 81, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+  .sidebar .form--subscribtion input[type=text] {
+    width: 60%;
+    margin-right: 8px;
+  }
+  /* line 84, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+  .sidebar .form--subscribtion input[type=submit] {
+    width: calc(40% - 8px);
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 767px) {
+  /* line 71, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+  .sidebar .form--subscribtion {
+    position: static;
+    display: inline-block;
+    width: 80%;
+  }
+  /* line 79, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+  .sidebar .form--subscribtion input {
+    display: inline-block;
+  }
+  /* line 81, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+  .sidebar .form--subscribtion input[type=text] {
+    width: 60%;
+    margin-right: 8px;
+  }
+  /* line 84, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+  .sidebar .form--subscribtion input[type=submit] {
+    width: calc(40% - 8px);
+  }
+}
+@media screen and (max-width: 599px) {
+  /* line 71, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+  .sidebar .form--subscribtion {
+    position: static;
+    display: inline-block;
+    width: 80%;
+  }
+  /* line 79, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+  .sidebar .form--subscribtion input {
+    display: inline-block;
+  }
+  /* line 81, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+  .sidebar .form--subscribtion input[type=text] {
+    width: 60%;
+    margin-right: 8px;
+  }
+  /* line 84, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+  .sidebar .form--subscribtion input[type=submit] {
+    width: calc(40% - 8px);
+  }
+}
+@media screen and (max-width: 599px) {
+  /* line 87, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+  .sidebar .form--subscribtion input[type=text] {
+    width: 46%;
+  }
+  /* line 89, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+  .sidebar .form--subscribtion input[type=submit] {
+    width: calc(54% - 8px);
+  }
+}
+/* line 91, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+.sidebar .form--subscribtion input {
+  width: 80%;
+}
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  /* line 91, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+  .sidebar .form--subscribtion input {
+    margin: 0 auto;
+    padding: 4px;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 767px) {
+  /* line 91, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+  .sidebar .form--subscribtion input {
+    margin: 0 auto;
+    padding: 4px;
+  }
+}
+@media screen and (max-width: 599px) {
+  /* line 91, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+  .sidebar .form--subscribtion input {
+    margin: 0 auto;
+    padding: 4px;
+  }
+}
+/* line 96, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+.sidebar .form--subscribtion input[type=text] {
+  margin-bottom: 16px;
+}
+
+/* line 98, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+nav.container {
+  text-align: right;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 600px) and (max-width: 767px) {
+  /* line 98, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+  nav.container {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 599px) {
+  /* line 98, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+  nav.container {
+    margin-bottom: 20px;
+  }
+}
+/* line 103, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+nav.container > a {
+  display: inline-block;
+  border: none;
+  margin-right: 16px;
+  font-family: "Andale Mono", monospace;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.07);
+}
+/* line 109, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+nav.container > a:before {
+  content: "";
+  display: block;
+  position: relative;
+  margin-top: -2px;
+  width: 0;
+  top: 1.8em;
+  border-bottom: 5px solid #78D18B;
+  transition: width 0.4s;
+}
+/* line 119, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+nav.container > a:hover:before {
+  width: 100%;
+}
+
+/* line 121, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+ul.social {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+}
+/* line 127, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+ul.social li {
+  width: 32px;
+  heigth: 32px;
+  border-radius: 50%;
+  line-height: 32px;
+  display: inline-block;
+  margin-right: 6px;
+}
+/* line 135, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+ul.social li:last-of-type {
+  margin-right: 0;
+}
+/* line 137, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+ul.social li a {
+  color: #333;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.07);
+  border-bottom: none;
+  transition: all 0.2s;
+}
+/* line 142, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+ul.social li a:hover {
+  color: #78D18B;
+}
+
+/* line 144, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+.nav--sign-in {
+  width: 60%;
+  margin-left: 40%;
+  list-style: none;
+  padding: 0;
+  text-align: right;
+}
+/* line 150, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+.nav--sign-in li {
+  display: inline-block;
+  margin-right: 20px;
+}
+/* line 153, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+.nav--sign-in a {
+  text-decoration: none;
+  color: #333;
+  border-bottom: none;
+}
+
+/* line 157, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+.search {
+  text-align: right;
+  margin-bottom: 40px;
+  font-size: 24px;
+  padding-right: 5%;
+  justify-content: flex-end;
+  align-items: center;
+}
+/* line 164, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+.search form {
+  width: 95%;
+}
+/* line 166, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/modules/_menu.sass */
+.search form input {
+  margin: 0;
+  padding: 0.5%;
+  padding-left: 12px;
+}
+
+/* line 3, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/states/_admin.sass */
+.profile-post {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+}
+
+/* line 7, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/states/_admin.sass */
+#admin h1 {
+  color: black;
+}
+/* line 10, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/states/_admin.sass */
+#admin .col-half {
+  padding: 40px;
+}
+/* line 14, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/states/_admin.sass */
+#admin .col-half:nth-of-type(4n+1) a {
+  color: #242424;
+}
+/* line 16, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/states/_admin.sass */
+#admin .col-half:nth-of-type(4n+1) b {
+  border-color: #242424;
+}
+/* line 21, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/states/_admin.sass */
+#admin .col-half:nth-of-type(4n+2) a {
+  color: #242424;
+}
+/* line 23, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/states/_admin.sass */
+#admin .col-half:nth-of-type(4n+2) b {
+  border-color: #242424;
+}
+/* line 31, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/states/_admin.sass */
+#admin .col-half:nth-of-type(4n+4) a {
+  color: #242424;
+}
+/* line 33, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/states/_admin.sass */
+#admin .col-half:nth-of-type(4n+4) b {
+  border-color: #242424;
+}
+/* line 35, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/states/_admin.sass */
+#admin .button, #admin .button-warning {
+  border: none;
+  font-family: "Avenir", "Helvetica", sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 1.1px;
+  padding: 10px 20px;
+  border-radius: 0;
+  background: #555;
+  margin-top: 20px;
+  transition: all 0.3s;
+  margin-left: 50px;
+}
+/* line 13, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/mixins/_button.sass */
+#admin .button:hover, #admin .button:focus, #admin .button:active, #admin .button-warning:hover, #admin .button-warning:focus, #admin .button-warning:active {
+  background: #5d772a;
+}
+/* line 38, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/states/_admin.sass */
+#admin .button a, #admin .button-warning a {
+  color: white;
+}
+/* line 40, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/states/_admin.sass */
+#admin .button-warning {
+  background: red;
+}
+/* line 42, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/states/_admin.sass */
+#admin .button-warning:hover {
+  background: #990000;
+}
+
+/* line 44, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/states/_admin.sass */
+.radio label {
+  margin: 10px;
+}
+
+/* line 3, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/states/_form-page.sass */
+h1 {
+  color: black;
+}
+
+/* line 6, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/states/_form-page.sass */
+form input, form textarea, form select {
+  width: 100%;
+  display: block;
+  margin: 5% auto;
+  padding: 2%;
+  border: 1px solid #c0c0c0;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  font-size: 16px;
+  line-height: 28px;
+  font-family: "Avenir", "Helvetica", sans-serif;
+}
+/* line 18, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/states/_form-page.sass */
+form input[type=submit]:hover, form input[type=submit]:focus {
+  background: #aeaeae;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+}
+/* line 21, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/states/_form-page.sass */
+form input[type='checkbox'], form input[type='file'] {
+  margin-top: 10px;
+}
+/* line 23, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/states/_form-page.sass */
+form label {
+  margin: 10%;
+}
+/* line 25, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/states/_form-page.sass */
+form textarea {
+  height: 450px;
+}
+/* line 28, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/states/_form-page.sass */
+form .col-half input, form .col-half textarea, form .col-half select {
+  width: 80%;
+}
+/* line 31, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/states/_form-page.sass */
+form .col-full input, form .col-full textarea, form .col-full select {
+  width: 90%;
+}
+
+/* line 2, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/states/_blog.sass */
+.post h2.post--title {
+  margin-bottom: 0;
+}
+/* line 4, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/states/_blog.sass */
+.post .post--title + p {
+  font-size: 14px;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+/* line 8, /Users/trudymacnabb/Code/code-shopify-blog/app/assets/stylesheets/states/_blog.sass */
+.post img {
+  margin-bottom: 40px;
+}

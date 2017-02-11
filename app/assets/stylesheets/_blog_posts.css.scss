@@ -13,9 +13,9 @@ h1{
 hr {
   margin: 15% 5%;
   background-color: #000;
-border-top: solid 1px #999;
-border-left: none;
-height:0px;
+  border-top: solid 1px #999;
+  border-left: none;
+  height:0px;
 }
 
 
@@ -86,18 +86,18 @@ height:0px;
 	border-radius: 50%;
 }
 .title {
-font-size: 80px;
-color: whitesmoke;
-font-family: sans-serif;
-text-shadow: 0px 0px 7px black, 0px 0px 60px black, 0px 0px 60px black, 0px 0px 60px black;
-position: absolute;
-width: 100%;
-text-align: center;
-top: 200px;
+  font-size: 80px;
+  color: whitesmoke;
+  font-family: sans-serif;
+  text-shadow: 0px 0px 7px black, 0px 0px 60px black, 0px 0px 60px black, 0px 0px 60px black;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 200px;
 /*background: rgba(255,255,255, 0.5);*/
 }
 .title span {
-color:#83AF9B;
+  color:#83AF9B;
 }
 
 .paginate {

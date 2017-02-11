@@ -37,4 +37,8 @@ class BlogPost < ActiveRecord::Base
     self.content.first(500)
   end
 
+  def self.search(search)
+    where("content like ? OR title like ? ", "%#{search}%", "%#{search}%")
+  end
+
 end
