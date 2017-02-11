@@ -38,7 +38,7 @@ class BlogPost < ActiveRecord::Base
   end
 
   def self.search(search)
-    where("content like ? OR title like ? ", "%#{search}%", "%#{search}%")
+    where("content ILIKE ? OR title ILIKE ? ", "%#{search}%", "%#{search}%")
   end
 
 end
