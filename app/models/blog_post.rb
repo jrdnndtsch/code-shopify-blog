@@ -1,6 +1,6 @@
 class BlogPost < ActiveRecord::Base
 
-  CATEGORIES = ['Theme', 'App']
+  CATEGORIES = ['Theme', 'App', 'JavaScript SDK']
 
   extend FriendlyId
     friendly_id :title, use: :slugged
