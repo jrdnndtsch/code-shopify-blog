@@ -14,4 +14,9 @@
 	<% @app_posts.each do |post| %>
 		<p>Step <%= post.road_map_order.to_words.capitalize%>:  <%= link_to post.title, blog_post_path(post) %></p>
 	<% end %>
+
+	<h2>Getting Started with the JavaScript SDK</h2>
+	<% @js_posts.each do |post| %>
+		<p>Step <%= post.road_map_order.to_words.capitalize%>:  <%= link_to post.title, blog_post_path(post) %></p>
+	<% end %>
 </div>
