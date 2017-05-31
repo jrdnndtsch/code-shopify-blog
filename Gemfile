@@ -22,8 +22,8 @@ gem 'acts-as-taggable-on', '~> 3.4'
 
 #for image management
 gem 'paperclip'
-gem 'aws-sdk-v1'
-gem 'aws-s3'
+gem 'aws-sdk'
+# gem 'aws-s3'
 
 
 # Use SCSS for stylesheets
