@@ -1,0 +1,18 @@
+.wrapper 
+	:width $wrapper-width
+	:max-width $wrapper-max-width
+	:margin 0 auto
+	&--flex
+		:display flex
+		&-wrap 
+			:flex-wrap wrap
+	+display-for(md sm xs)
+		:width 90%
+.wrapper--grey
+	:background $grey	
+	:max-width 620px
+	:margin 0 auto 
+	:padding 80px	
+	:position relative
+	+display-for(md sm xs)
+		:padding 40px

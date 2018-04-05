@@ -1,0 +1,47 @@
+@import 'display-for'
+.up-five-title 
+	:color #1E46F4
+	:text-align center
+	:margin 0
+	:transform translate(-50%, -50%)
+	:font-size 6rem
+	:line-height 7.2rem
+	:font-weight 400
+	:position absolute
+	:top 0
+	:left 50%
+	:width 100%
+	+display-for(md sm xs)
+		:font-size 4.4rem
+		:line-height 5.2rem 
+		:transform translateY(calc(-50% - 40px))
+
+.up-five-subtitle 
+	:font-size 2rem
+	:line-height 3.5rem
+	:width 70%
+	:text-align center
+	:margin 30px auto 125px auto
+	:line-height 40px
+	:color #1E46F4
+	:font-weight 400
+	+display-for(md sm xs) 
+		:margin 30px auto
+
+.primary-title 
+	:background #1E46F4
+	:padding 10px 55px 10px 55px
+	:color white
+	:transform translateX(-50%)
+	:display inline-block
+	:width 108%
+	:font-size 2rem
+	:line-height 2.4rem
+	:font-weight normal
+	:margin 50px 0
+	+display-for(md sm xs)
+		:width unset 
+		:transform translate(-25%)
+		:white-space nowrap
+
+

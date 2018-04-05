@@ -1,0 +1,23 @@
+//grid columns
+=make-column($columns, $grid: $grid-base)
+	:box-sizing border-box
+	:width percentage($columns / $grid)
+
+=make-gutter($left-gutter: 0, $right-gutter: 0, $grid: $grid-base)
+	:margin-left percentage($left-gutter / $grid)
+	:margin-right percentage($right-gutter / $grid)
+
+#demo-grid
+	.wrapper--flex
+		div 
+			:height 150px
+			:background $grey
+			+make-column(30 / 5)
+			+display-for(lg md)
+				+make-column(10)
+			+display-for(sm xs)
+				+make-column(30)
+		div:nth-of-type(2n + 2)	
+			:background $black
+
+

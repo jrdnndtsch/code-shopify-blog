@@ -11,7 +11,11 @@ class BlogPostsController < ApplicationController
     #   @blog_posts = BlogPost.tagged_with(params[:tag]).published?.order(updated_at: :desc).paginate(:page => params[:page], :per_page => 9)
     # else
     # end
-    @blog_posts = BlogPost.published?.search(params[:search]).order(updated_at: :desc).paginate(:page => params[:page], :per_page => 9)
+    if params[:search]
+      @blog_posts = BlogPost.published?.search(params[:search]).order(updated_at: :desc).paginate(:page => params[:page], :per_page => 9)
+    else  
+      @blog_posts = BlogPost.published?.order(updated_at: :desc).paginate(:page => params[:page], :per_page => 9)
+    end
     # @authors = User.all.includes(:blog_posts)
     # @tags = ActsAsTaggableOn::Tag.all.where.not(taggings_count: 0).order(taggings_count: :desc)
     # fresh_when etag: @blog_posts, last_modified: @blog_posts.maximum(:updated_at), public: true
