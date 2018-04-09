@@ -7,9 +7,9 @@
   <p class="up-five-subtitle">Shopify App and Theme Development tutorials for those who are familiar with code and want to dive into Shopify.</p>
   <% @blog_posts.each do |post|  %>
     <div class="blog-card">
-      <h2><%= link_to post.title, post%></h2>
-      <p>desc</p>
-      <%= link_to 'read more', post, class:'thing'%>
+      <h2 class="secondary-title"><%= post.title%></h2>
+      <p><%= post.short_description%></p>
+      <%= link_to 'read more', post, class:'read-more'%>
     </div>
   <% end %>
 </div>

@@ -11,22 +11,23 @@
 	:top 0
 	:left 50%
 	:width 100%
-	+display-for(md sm xs)
-		:font-size 4.4rem
-		:line-height 5.2rem 
-		:transform translateY(calc(-50% - 40px))
+	// +display-for(md sm xs)
+	// 	:font-size 4.4rem
+	// 	:line-height 5.2rem 
+	// 	:transform translateY(calc(-50% - 40px))
 
 .up-five-subtitle 
 	:font-size 2rem
 	:line-height 3.5rem
-	:width 70%
+	// :width 80%
 	:text-align center
-	:margin 30px auto 125px auto
+	:margin 30px auto 125px 
 	:line-height 40px
 	:color #1E46F4
 	:font-weight 400
+	:font-family 'Space Mono', monospace
 	+display-for(md sm xs) 
-		:margin 30px auto
+		:margin 30px auto 60px
 
 .primary-title 
 	:background #1E46F4
@@ -43,5 +44,70 @@
 		:width unset 
 		:transform translate(-25%)
 		:white-space nowrap
+.secondary-title 
+	:color #1E46F4
+	:position relative
+	:margin 0
+	:padding-top 16px
+	:font-size 1.4rem
+	:line-height 1.8rem
+	:font-weight 600
+	&:after
+		:content ''
+		:background #1E46F4
+		:width 30px
+		:height 3px
+		:position absolute
+		:top 0
+		:left 0
+.header
+	:position fixed
+	:z-index 10000
+	:padding 32px
+	:height 100vh
+	> .wrapper-outer
+		:position relative
+	.menu
+		:background #1E46F4
+		:color white
+		:width 422px
+		:height 100vh
+		:max-width 85vw
+		:padding 32px 0 40px 46px
+		:position absolute
+		:top 0
+		:left 0
+		:margin 0
+		:border 32px solid #fff
+	.menu-logo
+		:width 63px	
+	.menu-icon
+		:width unset
+	.close
+		:font-size 3rem
+		:line-height 3.7rem
+		:cursor pointer	
+	svg 
+		:cursor pointer	
+		&:hover 
+			.line1
+				:width 33px
+			.line2
+				:width 33px		
+		.line1
+			:transition 0.3s								
+	ul
+		:padding-left 36px
+		:padding 82px 0 195px 36px
+		:margin 0
+		:list-style none
+		li 
+			:font-size 2rem
+			:line-height 2.4rem
+			:font-weight normal
+			:margin-bottom 30px
+		a 
+			:color white				
+		
 
 

@@ -39,21 +39,9 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 <body>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-
-  <% if current_user.present? %>
-    <ul class="nav--sign-in">
-      <% if current_user.profile.present? %>
-        <li><%= link_to "My Profile", profile_path(current_user.profile)%></li>
-      <% end %>
-      <li><%= link_to "Format Guide", formatguide_show_path %></li>
-      <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: 'button' %></li>
-    </ul>
-  <% end %>
 
   <div class="header" data-reactid="2">
-     <div class="wrapper-outer" data-reactid="3">
+     <!-- <div class="wrapper-outer" data-reactid="3"> -->
         <svg width="33px" height="25px" viewBox="0 0 33 25" version="1.1" xmlns="http://www.w3.org/2000/svg" data-reactid="4">
            <title data-reactid="5">Menu</title>
            <desc data-reactid="6">Created with Sketch.</desc>
@@ -80,9 +68,20 @@
            </ul>
            <img class="menu-logo" src="/static/up-at-five-logo.575dd8c1.png" alt="" data-reactid="26">
         </div>
-     </div>
+     <!-- </div> -->
   </div>
+  <!-- <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
 
+  <% if current_user.present? %>
+    <ul class="nav--sign-in">
+      <% if current_user.profile.present? %>
+        <li><%= link_to "My Profile", profile_path(current_user.profile)%></li>
+      <% end %>
+      <li><%= link_to "Format Guide", formatguide_show_path %></li>
+      <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: 'button' %></li>
+    </ul>
+  <% end %> -->
   <!-- <div class="sidebar">
     <%= link_to blog_posts_path, class: 'logo' do%>
       <%= image_tag 'logo.svg'%>
@@ -98,14 +97,14 @@
   </div> -->
 
   <div class="site-content">
-    <nav class="container">
+    <!-- <nav class="container">
       <%= link_to 'About', about_path, class: 'menu-link' %>
       <%= link_to 'Blog', blog_posts_path, class: 'menu-link' %>
       <%= link_to 'Roadmap', roadmap_path, class: 'menu-link'%>
       <ul class="social">
-        <li><a href="https://twitter.com/up_at_five" target="_blank"><i class="fa fa-twitter"></i></a></li><!--
-          *--><li><a href="https://www.facebook.com/upat5/" target="_blank"><i class="fa fa-facebook"></i></a></li><!--
-          *--><li><a href="https://www.instagram.com/up_at_five/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+        <li><a href="https://twitter.com/up_at_five" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="https://www.facebook.com/upat5/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="https://www.instagram.com/up_at_five/" target="_blank"><i class="fa fa-instagram"></i></a></li>
       </ul>
     </nav>
     <div class="search container container--flex">
@@ -115,7 +114,7 @@
         <% end %>
       </div>
       <i class="fa fa-search"></i>
-    </div>
+    </div> -->
     <%= yield %>
   </div>
 
