@@ -1,0 +1,238 @@
+@import 'display-for'
+.up-five-title 
+	:color #1E46F4
+	:text-align center
+	:margin 0
+	:transform translate(-50%, -50%)
+	:font-size 6rem
+	:line-height 7.2rem
+	:font-weight 400
+	:position absolute
+	:top 0
+	:left 50%
+	:width 100%
+	+display-for(md sm xs)
+		:font-size 4.4rem
+		:line-height 5.2rem 
+		// :transform translateY(calc(-50% - 40px))
+
+.up-five-subtitle 
+	:font-size 2rem
+	:line-height 3.5rem
+	// :width 80%
+	:text-align center
+	:margin 30px auto 90px 
+	:line-height 40px
+	:color #1E46F4
+	:font-weight 400
+	:font-family 'Space Mono', monospace
+	+display-for(md sm xs) 
+		:margin 30px auto 60px
+
+.primary-title 
+	:background #1E46F4
+	:padding 10px 55px 10px 55px
+	:color white
+	:transform translateX(-50%)
+	:display inline-block
+	:width 108%
+	:font-size 2rem
+	:line-height 2.4rem
+	:font-weight normal
+	:margin 50px 0
+	+display-for(md sm xs)
+		:width unset 
+		:transform translate(-25%)
+		:white-space nowrap		
+.secondary-title 
+	:color #1E46F4
+	:position relative
+	:margin 0
+	:padding-top 16px
+	:font-size 1.4rem
+	:line-height 1.8rem
+	:font-weight 600
+	&:after
+		:content ''
+		:background #1E46F4
+		:width 30px
+		:height 3px
+		:position absolute
+		:top 0
+		:left 0
+.secondary-title-light 
+	:color white
+	:position relative
+	:margin 0
+	:padding-top 16px
+	:font-size 1.4rem
+	:line-height 1.8rem
+	:font-weight 400
+	&:after
+		:content ''
+		:background white
+		:width 30px
+		:height 3px
+		:position absolute
+		:top 0
+		:left 0			
+.header
+	:position fixed
+	:z-index 10000
+	:padding 32px
+	:width 100%
+	+display-for(sm xs)
+		:background white
+	> .wrapper-outer
+		:position relative
+	.menu
+		:background #1E46F4
+		:color white
+		:width 422px
+		:height 100vh
+		:max-width 85vw
+		:padding 32px 0 40px 46px
+		:position absolute
+		:top 0
+		:left 0
+		:margin 0
+		:border 32px solid #fff
+	p 
+		:font-size 1.4rem
+		:width 80%
+	input[type=text]
+		:border none
+		:border-bottom 2px solid white
+		:width 80%
+		:background #1E46F4				
+		:padding 10px
+		:font-size 1.2rem
+		:color white
+	input[type=submit]		
+		:background transparent
+		:color white
+		:border none
+		:padding 10px 0
+		:font-size 1.2rem 
+		:text-transform uppercase
+	.menu-logo
+		:width 63px	
+	.menu-icon
+		:width unset
+	.close
+		:font-size 3rem
+		:line-height 3.7rem
+		:cursor pointer	
+	.header-bar
+		:display flex
+		:justify-content space-between
+		.search
+			:display flex	
+			.fa-search 
+				:position relative
+				:left 10px
+				:bottom -10px
+		.search-form
+			input
+				:border none			
+				:border-bottom 2px solid black
+				:width 290px
+				:padding 10px 20px
+				:background transparent
+	svg 
+		:cursor pointer	
+		&:hover 
+			.line1
+				:width 33px
+			.line2
+				:width 33px		
+		.line1
+			:transition 0.3s								
+	ul
+		:padding-left 36px
+		:padding 82px 0 195px 36px
+		:margin 0
+		:list-style none
+		li 
+			:font-size 2rem
+			:line-height 2.4rem
+			:font-weight normal
+			:margin-bottom 30px
+		a 
+			:color white	
+.hidden
+	:display none							
+		
+
+
+
+footer
+	:margin 0
+	:width 90%
+	:margin 0 auto
+	:padding 36px 0 100px 0
+	img 
+		:width 70px
+		:position absolute
+	ul 
+		:padding 0
+		:margin 0
+		:list-style none
+	.image 
+		:float left
+
+	.info 
+		:width 33.33%
+		:font-size 1.2rem
+		:line-height 2rem
+		:text-transform uppercase
+
+	a 
+		:text-decoration none
+		:color #4A4A4A
+		:transition 0.3s
+
+		&:hover
+			:color #1E46F4
+	+display-for(md sm xs)
+		:padding 30px 0 20px 0
+		.info-wrapper
+			:width unset	
+		.info
+			:width 50%
+			:margin-top 30px
+			&:first-of-type
+				:width 100%
+				:margin-top 0	
+		img 
+			:position unset 
+			:float left
+			:margin-right 15px
+			:display block					
+
+.info-wrapper 
+	:display flex
+	:flex-wrap wrap
+	:width 620px
+	:margin 0 auto
+
+.social-bar 
+	:display flex
+	:width 295px
+	:padding 10px 0px 10px 90px
+	:background #1E46F4
+	:margin-left 105%
+	:font-size 2rem
+	a 
+		:color white
+		:margin-right 24px
+		:transition 0.3s
+		&:hover
+			:transform translateY(-15%)
+	+display-for(md sm xs)
+		:font-size 3rem
+		:margin-left 0
+		:width unset
+		:transform translateX(20px)
+		:margin-top 60px
+		:padding 8px 0px 8px 28px		

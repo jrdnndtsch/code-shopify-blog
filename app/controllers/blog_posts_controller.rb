@@ -11,7 +11,14 @@ class BlogPostsController < ApplicationController
     #   @blog_posts = BlogPost.tagged_with(params[:tag]).published?.order(updated_at: :desc).paginate(:page => params[:page], :per_page => 9)
     # else
     # end
-    @blog_posts = BlogPost.published?.search(params[:search]).order(updated_at: :desc).paginate(:page => params[:page], :per_page => 9)
+    if params[:search]
+      @blog_posts = BlogPost.published?.search(params[:search]).order(updated_at: :desc).paginate(:page => params[:page], :per_page => 9)
+    else  
+      @blog_posts = BlogPost.published?.order(updated_at: :desc).paginate(:page => params[:page], :per_page => 9)
+    end
+    @theme_posts = BlogPost.published?.by_category('Theme').order(:road_map_order)
+    @app_posts = BlogPost.published?.by_category('App').order(:road_map_order)
+    @js_posts = BlogPost.published?.by_category('JSSDK').order(:road_map_order)
     # @authors = User.all.includes(:blog_posts)
     # @tags = ActsAsTaggableOn::Tag.all.where.not(taggings_count: 0).order(taggings_count: :desc)
     # fresh_when etag: @blog_posts, last_modified: @blog_posts.maximum(:updated_at), public: true
@@ -98,6 +105,6 @@ class BlogPostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def blog_post_params
-      params.require(:blog_post).permit(:title, :content, :tag_list, :published, :photo, :road_map_category, :road_map_order, :meta_description)
+      params.require(:blog_post).permit(:title, :content, :tag_list, :published, :photo, :road_map_category, :road_map_order, :meta_description, :short_description)
     end
 end

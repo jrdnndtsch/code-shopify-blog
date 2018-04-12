@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160708151312) do
+ActiveRecord::Schema.define(version: 20180409145414) do
 
   create_table "blog_posts", force: :cascade do |t|
     t.string   "title"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20160708151312) do
     t.string   "road_map_category"
     t.integer  "road_map_order"
     t.string   "meta_description"
+    t.string   "short_description"
   end
 
   add_index "blog_posts", ["slug"], name: "index_blog_posts_on_slug", unique: true
