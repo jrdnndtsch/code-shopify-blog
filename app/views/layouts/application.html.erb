@@ -40,33 +40,40 @@
 </head>
 <body>
 
-  <div class="header" data-reactid="2">
-     <!-- <div class="wrapper-outer" data-reactid="3"> -->
-        <svg width="33px" height="25px" viewBox="0 0 33 25" version="1.1" xmlns="http://www.w3.org/2000/svg" data-reactid="4">
-           <title data-reactid="5">Menu</title>
-           <desc data-reactid="6">Created with Sketch.</desc>
-           <defs data-reactid="7"></defs>
-           <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" data-reactid="8">
-              <g id="About-Us" transform="translate(-54.000000, -51.000000)" fill="#1E46F4" data-reactid="9">
-                 <g id="Menu" transform="translate(54.000000, 46.000000)" data-reactid="10">
-                    <g transform="translate(0.000000, 5.000000)" id="Rectangle-2" data-reactid="11">
-                       <rect x="0" y="0" width="33" height="3.94736842" data-reactid="12"></rect>
-                       <rect class="line1" x="0" y="10.5263158" width="26.4" height="3.94736842" data-reactid="13"></rect>
-                       <rect class="line2" x="0" y="21.0526316" width="19.8" height="3.94736842" data-reactid="14"></rect>
-                    </g>
-                 </g>
-              </g>
-           </g>
-        </svg>
-        <div class="hidden menu " data-reactid="15">
-           <p class="close" data-reactid="16">X</p>
-           <ul data-reactid="17">
-              <li data-reactid="18"><a href="/" data-reactid="19">home</a></li>
-              <li data-reactid="20"><a href="/about" data-reactid="21">about</a></li>
-              <li data-reactid="22"><a href="/case-studies" data-reactid="23">case studies</a></li>
-              <li data-reactid="24"><a href="/educational-resources" data-reactid="25">educational resources</a></li>
+  <div class="header">
+    <div class="header-bar">
+      <svg width="33px" height="25px" viewBox="0 0 33 25" version="1.1" xmlns="http://www.w3.org/2000/svg" id="open-menu">
+         <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" data-reactid="8">
+            <g id="About-Us" transform="translate(-54.000000, -51.000000)" fill="#1E46F4" data-reactid="9">
+               <g id="Menu" transform="translate(54.000000, 46.000000)" data-reactid="10">
+                  <g transform="translate(0.000000, 5.000000)" id="Rectangle-2" data-reactid="11">
+                     <rect x="0" y="0" width="33" height="3.94736842" data-reactid="12"></rect>
+                     <rect class="line1" x="0" y="10.5263158" width="26.4" height="3.94736842" data-reactid="13"></rect>
+                     <rect class="line2" x="0" y="21.0526316" width="19.8" height="3.94736842" data-reactid="14"></rect>
+                  </g>
+               </g>
+            </g>
+         </g>
+      </svg>
+      <div class="search">
+        <i class="fa fa-search"></i>
+        <div class="search-form">
+          <%= form_tag blog_posts_path, method: :get do %>
+            <%= text_field_tag :search, params[:search] %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+        <div class="hidden menu">
+           <p class="close">X</p>
+           <ul>
+              <li><a href="http://www.upatfive.ca/about">about</a></li>
+              <li><a href="http://www.upatfive.ca/about#contact-area">contact us</a></li>
+              <li><a href="https://www.shopify.ca/?ref=up-at-five" target="_blank">Sign up for Shopify</a></li>
            </ul>
-           <img class="menu-logo" src="/static/up-at-five-logo.575dd8c1.png" alt="" data-reactid="26">
+           <p class="description signup">Sign up to be the first to know about new tutorials</p>
+           <form class="form--subscribtion"action="https://tinyletter.com/up_at_five" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/up_at_five', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true"><input type="text" name="email" id="tlemail" /><input type="hidden" value="1" name="embed"/><input type="submit" value="join our email list" /></form>
+           <!-- <img class="menu-logo" src="/static/up-at-five-logo.575dd8c1.png" alt=""> -->
         </div>
      <!-- </div> -->
   </div>
@@ -95,8 +102,9 @@
     <p class="description signup">Sign up to be the first to know about new tutorials</p>
       <form class="form--subscribtion"action="https://tinyletter.com/up_at_five" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/up_at_five', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true"><input type="text" name="email" id="tlemail" /><input type="hidden" value="1" name="embed"/><input type="submit" value="join our email list" /></form>
   </div> -->
-
-  <div class="site-content">
+  <div class="wrapper--flex"></div>
+  <div class="wrapper--grey">
+    <%= link_to root_path do %><h1 class="up-five-title">Code Shopify</h1><%end %>
     <!-- <nav class="container">
       <%= link_to 'About', about_path, class: 'menu-link' %>
       <%= link_to 'Blog', blog_posts_path, class: 'menu-link' %>
@@ -116,12 +124,78 @@
       <i class="fa fa-search"></i>
     </div> -->
     <%= yield %>
+    <div class="social-bar">
+      <a href="https://github.com/upatfive" target="_blank"><span aria-hidden="true" class="fa fa-github"></span></a>
+      <a href="https://twitter.com/up_at_five" target="_blank"><span aria-hidden="true" class="fa fa-twitter"></span></a>
+      <a href="https://www.linkedin.com/company/up-at-five/" target="_blank"><span aria-hidden="true" class="fa fa-linkedin"></span></a>
+    </div>
   </div>
+
+  <footer>
+     <%= image_tag 'up_at_five_logo.png'%>
+     <div class="info-wrapper" >
+        <div class="info" >
+           <ul>
+              <li><a href="http://www.upatfive.ca/">about us</a></li>
+              <li><a href="https://www.shopify.ca/?ref=up-at-five" target="_blank">sign up for Shopify and we both win 🙌</a></li>
+           </ul>
+        </div>
+        <div class="info">
+           <ul>
+              <li><a href="mailto:hello@upatfive.ca?Subject=Hello">Hello@upatfive.ca</a></li>
+           </ul>
+        </div>
+        <div class="info">
+           <ul>
+              <li>@ upatfive, 2018</li>
+           </ul>
+        </div>
+     </div>
+  </footer>
+  <% if current_page?(root_url) %>
+    <div class="roadmap hidden">
+      <p class="roadmap-close">×</p>
+      <p class="desc">A little direction on which tutorials to follow to get started with either theme or app development.</p>
+      <h2 class="secondary-title-light">Getting Started With Theme Development</h2>
+      <ol>
+        <% @theme_posts.each do |post| %>
+          <li><%= link_to post.title, blog_post_path(post) %></li>
+        <% end %>
+      </ol>
+      <h2 class="secondary-title-light">Getting Started with App Development</h2>
+      <ol>
+          <% @app_posts.each do |post| %>
+            <li> <%= link_to post.title, blog_post_path(post) %></li>
+          <% end %>
+      </ol>
+      <h2 class="secondary-title-light">Getting Started with the JavaScript SDK</h2>
+      <ol>
+        <% @js_posts.each do |post| %>
+          <li><%= link_to post.title, blog_post_path(post) %></li>
+        <% end %>
+      </ol>
+    </div>
+  <% end %>
 
   <script>
 
     $('.fa-search').on('click', function() {
     $('.search-form').toggleClass('vis-hidden').toggleClass('no-width')
+    })
+    $('#open-menu').on('click', () => {
+        $('.menu').removeClass('hidden')
+    })
+    $('.close').on('click', () => {
+      $('.menu').addClass('hidden')
+    })
+
+    $('#roadmap-open').on('click', (e) => {
+      e.preventDefault();
+      $('.roadmap').removeClass('hidden')
+    })
+
+    $('.roadmap-close').on('click', ()=> {
+      $('.roadmap').addClass('hidden')
     })
 
     // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

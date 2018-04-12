@@ -1,7 +1,11 @@
 .blog-card
 	:width 60%
+	+display-for(sm xs)
+		:width 90%
 	&:nth-of-type(2n)
-		:margin-left 40%	
+		:margin-left 40%
+		+display-for(sm xs)
+			:margin-left 10%	
 	p 
 		:font-size 1.4rem
 		:font-family 'Space Mono', monospace
@@ -13,4 +17,138 @@
 		:margin-top 24px
 		:display block
 .blog-card + .blog-card 
-	:margin-top 130px					
+	:margin-top 130px	
+.button + .blog-card
+	:margin-top 100px						
+.post-content
+	:font-family 'Space Mono', monospace	
+	:font-size 1.4rem
+	:line-height 2.7rem
+	:letter-spacing 0.8px	
+	img 
+		:max-width 100%	
+	h2 
+		:font-family 'Work Sans', sans-serif
+		:text-transform uppercase
+		:font-weight 400
+		:margin 30px	0
+		:font-size 1.4rem
+	h3 
+		:font-weight 400
+		:margin 30px 0	10px
+		:font-size 1.4rem
+		:font-weight 600
+	a 
+		:color #1E46F4
+.post-info
+	:text-transform uppercase
+	:font-size 1.2rem
+	:position relative
+	:padding-top 1px
+	:margin-top 80px
+	&:after
+		:content ''
+		:background #1E46F4
+		:width 30px
+		:height 3px
+		:position absolute
+		:top 0
+		:left 0	
+	.tags 
+		:display flex
+		ul 
+			:list-style none	
+			:display flex
+			:margin 0
+			:padding 0
+			:color #1E46F4
+			:padding-left 6px
+			li 
+				&:after
+					:content ','
+					:margin 0 3px 0 2px						
+				&:last-of-type
+					&:after
+						:content ''
+		
+.blog-post-admin-actions
+	:margin-top 40px
+	.button
+		:display inline-block
+	.button-warning
+		:color tomato				
+.button.more-posts
+	:margin 60px auto 180px		
+
+
+.roadmap
+	:background #1E46F4
+	:position absolute
+	:top 0
+	:left 0
+	:width 100%
+	:max-width 650px
+	:min-height 100vh
+	:z-index 1000000
+	:color white
+	:padding 100px 10% 100px 46px
+	.roadmap-close
+		:font-size 3rem
+		:position absolute
+		:top 22px 
+		:left 46px
+		:cursor pointer
+		:font-family 'Space Mono', monospace	
+	h2.secondary-title-light
+		:margin 105px	0 50px
+		:max-width 200px
+		:line-height 2rem
+		:text-transform lowercase
+	a 
+		:color white
+		:text-decoration none
+	.desc
+		:font-size 1.4rem
+		:text-transform uppercase
+		:max-width 360px
+		:width 90%
+		:line-height 1.8rem	
+	ol 
+		:list-style none
+		:padding-left 120px
+	li 
+		:counter-increment item
+		:position relative
+		:padding-left 65px
+		:font-family 'Space Mono', monospace
+		:font-size 1.4rem
+		:line-height 2.7rem
+		:max-width 340px
+		&:before
+			:content counter(item)	
+			:inlin-display block 
+			:color 	#1E46F4
+			:background white	
+			:position absolute
+			:font-size 2rem
+			:line-height 25px
+			:width 25px
+			:height 25px
+			:text-align center
+			:left 0
+			:top 0
+			:font-family 'Work Sans', sans-serif	
+
+.blog-edit
+	input, textarea
+		:width 100%
+		:margin-bottom 20px
+		:border 1px solid lightgrey
+	input
+		:padding 10px 20px
+	textarea
+		:height 600px				
+											
+
+
+

@@ -1,10 +1,8 @@
 <% content_for :title, 'Code Shopify | Tutorials' %>
 <% content_for :meta_description, 'Shopify App and Theme Development tutorials for those who are familiar with code and want to dive into Shopify. Created by upatfive.ca' %>
-<div class="wrapper--flex"></div>
-<div class="wrapper--grey">
-  <h1 class="up-five-title">Code Shopify</h1>
   <h2 class="primary-title">tutorials</h2>
   <p class="up-five-subtitle">Shopify App and Theme Development tutorials for those who are familiar with code and want to dive into Shopify.</p>
+  <a href="#" class="button button-centered" id="roadmap-open">roadmap</a>
   <% @blog_posts.each do |post|  %>
     <div class="blog-card">
       <h2 class="secondary-title"><%= post.title%></h2>
@@ -12,11 +10,10 @@
       <%= link_to 'read more', post, class:'read-more'%>
     </div>
   <% end %>
-</div>
 
 <%= will_paginate @blog_posts, class: 'paginate' %>
 
- <br>
+
 
  <script>
    jQuery(document).ready(function($){
