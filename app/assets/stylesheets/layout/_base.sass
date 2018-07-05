@@ -59,8 +59,8 @@
 	:position relative
 	:margin 0
 	:padding-top 16px
-	:font-size 1.4rem
-	:line-height 1.8rem
+	:font-size 1.6rem
+	:line-height 2rem
 	:font-weight 600
 	&:after
 		:content ''
@@ -153,6 +153,7 @@
 				:background transparent
 				+display-for(md sm xs)
 					:width 100%
+					:color black	
 	svg 
 		:cursor pointer	
 		&:hover 
@@ -252,3 +253,21 @@ footer
 		:transform translateX(60px)
 		:margin-top 60px
 		:padding 8px 0px 8px 28px		
+
+.paginate
+	:padding-top 20px
+	:text-align center
+	:color black
+	:font-size 1.8rem	
+	.current
+		:color #1E46F4
+	a 
+		:color black
+		:text-decoration none
+		:font-size 1.8rem
+	em 
+		:font-style normal
+		:font-weight bold		
+	a, em, span
+		:padding 4px						
+		
