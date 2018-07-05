@@ -21,7 +21,7 @@
 .button + .blog-card
 	:margin-top 100px						
 .post-content
-	:font-family 'Space Mono', monospace	
+	:font-family 'Work Sans', monospace	
 	:font-size 1.4rem
 	:line-height 2.7rem
 	:letter-spacing 0.8px	
@@ -116,6 +116,8 @@
 	ol 
 		:list-style none
 		:padding-left 120px
+		+display-for(sm xs)
+			:padding-left 0
 	li 
 		:counter-increment item
 		:position relative
