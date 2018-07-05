@@ -30,15 +30,20 @@ class BlogPostsController < ApplicationController
   # GET /blog_posts/1.json
   def show
     # expires_in 5.minutes
+    @theme_posts = BlogPost.published?.by_category('Theme').order(:road_map_order)
+    @app_posts = BlogPost.published?.by_category('App').order(:road_map_order)
+    @js_posts = BlogPost.published?.by_category('JSSDK').order(:road_map_order)
   end
 
   # GET /blog_posts/new
   def new
     @blog_post = BlogPost.new
+    @theme_posts = BlogPost.published?.by_category('Theme').order(:road_map_order)
   end
 
   # GET /blog_posts/1/edit
   def edit
+    @theme_posts = BlogPost.published?.by_category('Theme').order(:road_map_order)
     if user_owns_blog_post?
     else
       redirect_to root_path
