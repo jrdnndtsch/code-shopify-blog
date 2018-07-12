@@ -37,13 +37,17 @@ class BlogPostsController < ApplicationController
 
   # GET /blog_posts/new
   def new
+    @app_posts = BlogPost.published?.by_category('App').order(:road_map_order)
     @blog_post = BlogPost.new
     @theme_posts = BlogPost.published?.by_category('Theme').order(:road_map_order)
+    @js_posts = BlogPost.published?.by_category('JSSDK').order(:road_map_order)
   end
 
   # GET /blog_posts/1/edit
   def edit
+    @app_posts = BlogPost.published?.by_category('App').order(:road_map_order)
     @theme_posts = BlogPost.published?.by_category('Theme').order(:road_map_order)
+    @js_posts = BlogPost.published?.by_category('JSSDK').order(:road_map_order)
     if user_owns_blog_post?
     else
       redirect_to root_path
