@@ -44,7 +44,7 @@
 	:display inline-block
 	:width 75%
 	:font-size 2rem
-	:line-height 2.4rem
+	:line-height 2.6rem
 	:font-weight normal
 	:margin 50px 0
 	+display-for(md)
@@ -70,6 +70,8 @@
 		:position absolute
 		:top 0
 		:left 0
+h1 
+	:line-height 3.2rem
 .secondary-title-light 
 	:color white
 	:position relative
@@ -91,7 +93,9 @@
 	:z-index 10000
 	:padding 32px
 	:width 100%
-	:background repeating-linear-gradient(to bottom,rgb(255, 255, 255) 0%,rgba(255, 255, 255, 0.3) 100%)
+	:background linear-gradient(to top, transparent 0%, rgba(255, 255, 255, 0.01) -10%, rgba(255, 255, 255, 1) 100%)
+	// :background linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.01) 40%, rgba(0, 0, 0, 0.7) 100%)
+	// :background repeating-linear-gradient(to bottom,rgb(255, 255, 255) 0%,rgba(255, 255, 255, 0.3) 100%)
 	+display-for(sm xs)
 		:background white
 	> .wrapper-outer
