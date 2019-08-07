@@ -1,4 +1,4 @@
-class CreateBlogPhotos < ActiveRecord::Migration
+class CreateBlogPhotos < ActiveRecord::Migration[5.1]
   def change
     create_table :blog_photos do |t|
       t.references :blog_post, index: true, foreign_key: true
