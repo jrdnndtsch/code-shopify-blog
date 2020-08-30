@@ -12,9 +12,9 @@ class BlogPostsController < ApplicationController
     # else
     # end
     if params[:search]
-      @blog_posts = BlogPost.published?.search(params[:search]).order(updated_at: :desc).paginate(:page => params[:page], :per_page => 9)
+      @blog_posts = BlogPost.published?.search(params[:search]).order(updated_at: :desc).paginate(:page => params[:page], :per_page => 8)
     else  
-      @blog_posts = BlogPost.published?.order(updated_at: :desc).paginate(:page => params[:page], :per_page => 9)
+      @blog_posts = BlogPost.published?.order(updated_at: :desc).paginate(:page => params[:page], :per_page => 8)
     end
     @theme_posts = BlogPost.published?.by_category('Theme').order(:road_map_order)
     @app_posts = BlogPost.published?.by_category('App').order(:road_map_order)
