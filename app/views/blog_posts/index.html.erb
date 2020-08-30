@@ -1,26 +1,36 @@
 <% content_for :title, 'Code Shopify | Tutorials' %>
 <% content_for :meta_description, 'Shopify App and Theme Development tutorials for those who are familiar with code and want to dive into Shopify. Created by upatfive.ca' %>
 
-  
-  <h2 class="primary-title">tutorials</h2>
-  <p class="up-five-subtitle">Shopify App and Theme Development tutorials for those who are familiar with code and want to dive into Shopify.</p>
-  <a href="#" class="button button-centered" id="roadmap-open">roadmap</a>
+
+<%
+=begin%>
+<h2 class="primary-title">tutorials</h2>
+<%
+=end%>
+<%
+=begin%>
+<p class="up-five-subtitle">Shopify App and Theme Development tutorials for those who are familiar with code and want to dive into Shopify.</p>
+<%
+=end%>
+
+<div class="blog-card-grid">
   <% @blog_posts.each do |post|  %>
-    <div class="blog-card">
-      <h2 class="secondary-title"><%= post.title%></h2>
-      <p><%= post.short_description%></p>
-      <%= link_to 'read more', post, class:'read-more'%>
-    </div>
+  <div class="blog-card">
+    <h2 class="secondary-title"><%= post.title%></h2>
+    <p><%= post.short_description%></p>
+    <%= link_to 'read more', post, class:'button button-dark button-centered'%>
+  </div>
   <% end %>
+</div>
 
 <%= will_paginate @blog_posts, class: 'paginate' %>
 
 
 
- <script>
-   jQuery(document).ready(function($){
-     Rainbow.color();
-     $('.previous_page').text('<<');
-     $('.next_page').text('>>')
-   });
- </script>
+<script>
+  jQuery(document).ready(function($) {
+    Rainbow.color();
+    $('.previous_page').text('<<');
+    $('.next_page').text('>>')
+  });
+</script>
