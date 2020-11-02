@@ -13,7 +13,8 @@ span.hl
 	:display grid 
 	:grid-template-columns repeat(2, 1fr)
 	:grid-gap 80px
-	:margin-top 120px
+	:width 85%
+	:margin 120px auto
 	+display-for(md sm xs)
 		:grid-template-columns repeat(1, 1fr)
 		:margin-top 80px
@@ -178,6 +179,17 @@ span.hl
 	textarea
 		:height 600px				
 											
-
+.blog-post
+		:display grid 
+		:grid-template-columns 2fr 1fr 
+		:grid-gap 80px
+		img 
+			:max-width 100%
+		.sidebar 
+			:margin-top 280px
+			ul
+				:list-style none
+				li 
+					:margin-bottom 80px
 
 
