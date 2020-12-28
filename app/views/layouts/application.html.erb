@@ -20,6 +20,26 @@
   <link href="https://fonts.googleapis.com/css?family=Space+Mono|Work+Sans" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap" rel="stylesheet">
 
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-P67SQ93');
+  </script>
+  <!-- End Google Tag Manager -->
+
   <!-- <title>Code Shopify | Tutorials</title> -->
   <title><%=h yield(:title)%></title>
   <!-- meta description -->
@@ -49,6 +69,10 @@
 </head>
 
 <body>
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P67SQ93" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
 
   <div class="header">
@@ -134,23 +158,24 @@
 =end%>
   <div class="wrapper--grey">
     <%= link_to root_path do %><h1 class="up-five-title">Shopify App and Theme Development tutorials for those who are familiar with code and want to dive into Shopify.</h1><%end %>
-    <!-- <section id="videos" class="videos">
+    <section id="videos" class="videos">
       <p class="video-close"><%= image_tag  "close.svg" %></p>
       <div class="wrapper--flex">
-        <%= image_tag 'ShopifyUnite.jpg' %>
+        <%= image_tag 'frmwrkvue.png' %>
         <div class="videos-info">
           <h3>Hey Everyone!</h3>
-          <p> 🎉 We've created 2 new video tutorial series </p>
-          <p>One is about integrating React directly into your Shopify theme.</p>
-          <p>The other is about creating a full Shopify app with Polaris React components.</p>
-          <p>Check them out <a href="https://codeecommerce.com/" target="_blank">here</a></p>
-          <h3>Hi Folks</h3>
+          <p> 🎉 We have a new course on Vue.js 🎉</p>
+          <p>It may be noticeable that I really enjoy integrating Vue.js into Shopify. In fact, here's a <a href="https://www.vuemastery.com/conferences/vueconf-toronto-2018/augmenting-shopify-with-Vuejs/" target="_blank">video</a> of me speaking at VueConf about it.</p>
+          <p>Now I'm partnering up with <a href="https://frmwrk.school/#/" target="_blank">frmwrk.school</a> to offer a live online intro course on Vue.js. Just the thing you need to get started and have people to ask your questions to as you go.</p>
+          <p>Check it out <a href="https://frmwrk.school/#/" target="_blank">here</a></p>
+          <p>The class will be happening Jan 24, 2021 with early bird pricing until Dec 31, 2020.</p>
+          <!--<h3>Hi Folks</h3>
           <p>With a lot of us practicing social distancing and self-quarantine we wanted to put out our video courses for <u><b>free</b></u>. For us, learning something new can provide a bit of respite from a racing mind. If this is true for you too, please dive in!</p>
-          <p>If you feel you can afford to, please consider donating any portion of the cost of this course to a local charity or purchase a gift certificate to a small business. A lot of folks will feel both the physical and financial burden of this pandemic and seemingly small contributions when multiplied go a long way.</p>
+          <p>If you feel you can afford to, please consider donating any portion of the cost of this course to a local charity or purchase a gift certificate to a small business. A lot of folks will feel both the physical and financial burden of this pandemic and seemingly small contributions when multiplied go a long way.</p>-->
 
         </div>
       </div>
-    </section>-->
+    </section>
 
     <a href="https://www.shopify.ca/?ref=up-at-five" target="_blank" class="button button-centered" id="roadmap-open">Sign up for Shopify</a>
 

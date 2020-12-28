@@ -183,12 +183,18 @@ span.hl
 		:display grid 
 		:grid-template-columns 2fr 1fr 
 		:grid-gap 80px
+		+display-for(md sm xs)
+			:grid-template-columns 1fr
 		img 
 			:max-width 100%
 		.sidebar 
 			:margin-top 280px
+			+display-for(md sm xs)
+				:margin-top 0px
 			ul
 				:list-style none
+				:margin 0
+				:padding 0
 				li 
 					:margin-bottom 80px
 
