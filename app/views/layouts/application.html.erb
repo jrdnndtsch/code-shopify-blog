@@ -158,37 +158,17 @@
 =end%>
   <div class="wrapper--grey">
     <%= link_to root_path do %><h1 class="up-five-title">Shopify App and Theme Development tutorials for those who are familiar with code and want to dive into Shopify.</h1><%end %>
-    <section id="videos" class="videos">
+    <%
+=begin%>
+ <section id="videos" class="videos">
       <p class="video-close"><%= image_tag  "close.svg" %></p>
       <div class="" style="text-align: center">
         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdf8pm3y28Fv_OZ53Q9-VeC0jTLSJFO80dDKDsYSqRi3QaZxw/viewform?embedded=true" width="640" height="570" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-        <%
-=begin%>
-        <%= image_tag 'design_packs_transparent_logo.png' %>
-        <%
-=end%>
-        <%
-=begin%>
-        <div class="videos-info">
-          <h3>Hey Everyone!</h3>
-          <p> 🎒 I'd like to introduce <a href="https://shopdesignpacks.com/" target="_blank">Design Packs</a> 🎒</p>
-          <p>I've created a Shopify app that let's you add Sections and Templates to your existing theme!</p>
-          <p>It's free to install and you can browse the "Packs" and purchase them (one time fee) to add to any theme in your shop. We've created packs for function and style. For example you could add a logo list to your homepage, or a pie chart. We've also created banners that only show up for certain locations or at certain times. Once added to your theme, you can customize them through the normal theme customizer to fit the styles of your store.</p>
-          <p>We're always in the market for new ideas, so if there's something you're looking for let us know! <a href="mailto:info@codescouts.ca" target="_blank">info@codescouts.ca</a></p>
-          <%
-=end%>
 
-          <!--<h3>Hi Folks</h3>
-          <p>With a lot of us practicing social distancing and self-quarantine we wanted to put out our video courses for <u><b>free</b></u>. For us, learning something new can provide a bit of respite from a racing mind. If this is true for you too, please dive in!</p>
-          <p>If you feel you can afford to, please consider donating any portion of the cost of this course to a local charity or purchase a gift certificate to a small business. A lot of folks will feel both the physical and financial burden of this pandemic and seemingly small contributions when multiplied go a long way.</p>-->
-
-        <%
-=begin%>
- </div> 
+      </div>
+    </section> 
 <%
 =end%>
-      </div>
-    </section>
 
     <a href="https://www.shopify.ca/?ref=up-at-five" target="_blank" class="button button-centered" id="roadmap-open">Sign up for Shopify</a>
 
@@ -247,6 +227,10 @@
         <ul>
           <li><a href="mailto:hello@upatfive.ca?Subject=Hello">hello@upatfive.ca</a></li>
         </ul>
+      </div>
+      <div class="info">
+        <p class="description signup">sign up to be the first to know about new tutorials</p>
+        <form class="form--subscribtion" action="https://tinyletter.com/up_at_five" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/up_at_five', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true"><input type="text" name="email" id="tlemail" /><input type="hidden" value="1" name="embed" /><input class="button" type="submit" value="join our email list" /></form>
       </div>
     </div>
   </footer>
