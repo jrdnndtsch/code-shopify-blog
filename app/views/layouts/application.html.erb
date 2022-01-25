@@ -158,17 +158,18 @@
 =end%>
   <div class="wrapper--grey">
     <%= link_to root_path do %><h1 class="up-five-title">Shopify App and Theme Development tutorials for those who are familiar with code and want to dive into Shopify.</h1><%end %>
+
     <%
 =begin%>
  <section id="videos" class="videos">
       <p class="video-close"><%= image_tag  "close.svg" %></p>
-      <div class="" style="text-align: center">
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdf8pm3y28Fv_OZ53Q9-VeC0jTLSJFO80dDKDsYSqRi3QaZxw/viewform?embedded=true" width="640" height="570" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-
+      <div class="" style="display: flex; justify-content: center;">
+       <h3>TRUDY</h3>
       </div>
-    </section> 
+    </section>  
 <%
 =end%>
+
 
     <a href="https://www.shopify.ca/?ref=up-at-five" target="_blank" class="button button-centered" id="roadmap-open">Sign up for Shopify</a>
 
@@ -228,10 +229,14 @@
           <li><a href="mailto:hello@upatfive.ca?Subject=Hello">hello@upatfive.ca</a></li>
         </ul>
       </div>
-      <div class="info">
+      <%
+=begin%>
+ <div class="info">
         <p class="description signup">sign up to be the first to know about new tutorials</p>
         <form class="form--subscribtion" action="https://tinyletter.com/up_at_five" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/up_at_five', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true"><input type="text" name="email" id="tlemail" /><input type="hidden" value="1" name="embed" /><input class="button" type="submit" value="join our email list" /></form>
-      </div>
+      </div> 
+<%
+=end%>
     </div>
   </footer>
   <% if controller.controller_name == "blog_posts"%>
